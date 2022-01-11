@@ -17,7 +17,7 @@ protoc \
 $SRC_DIR/ohmnyom.proto
 
 if [ "$(ls -A $GO_DIR)" ]; then
-  cd $GO_DIR
+#  cd $GO_DIR
   go mod init github.com/aiceru/protonyom/gonyom
   go mod tidy
   cd ..
