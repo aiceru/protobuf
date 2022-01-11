@@ -1,4 +1,4 @@
-module github.com/aiceru/protonyom/goprotonyom
+module github.com/aiceru/protonyom/gonyom
 
 go 1.16
 

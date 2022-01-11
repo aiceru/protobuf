@@ -1,9 +1,9 @@
 #!/bin/bash
 
 SRC_DIR=$(pwd)
-DART_OUT=$SRC_DIR/dart
+DART_OUT=$SRC_DIR/dartnyom
 GO_OUT=$SRC_DIR
-GO_DIR=$SRC_DIR/goprotonyom
+GO_DIR=$SRC_DIR/gonyom
 
 rm -rf $GO_DIR
 rm -rf $DART_OUT
@@ -19,7 +19,7 @@ $SRC_DIR/ohmnyom.proto
 
 if [ "$(ls -A $GO_DIR)" ]; then
   cd $GO_DIR
-  go mod init github.com/aiceru/protonyom/goprotonyom
+  go mod init github.com/aiceru/protonyom/gonyom
   go mod tidy
   cd ..
 fi
