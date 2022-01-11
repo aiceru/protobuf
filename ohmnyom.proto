@@ -1,0 +1,48 @@
+syntax = "proto3";
+package goprotonyom;
+
+option go_package = "github.com/aiceru/protonyom/goprotonyom";
+
+import "google/protobuf/timestamp.proto";
+
+enum OAuthType {
+  NONE = 0;
+  GOOGLE = 1;
+  KAKAO = 2;
+}
+
+message Credential {
+  string id = 1;
+  string password = 2;
+  OAuthType oauthtype = 3;
+  string oauthid = 4;
+}
+
+message Account {
+  string id = 1;
+  string email = 2;
+  string name = 3;
+  string photourl = 4;
+  OAuthType oauthtype =5;
+  string oauthid = 6;
+  google.protobuf.Timestamp signedup = 7;
+  repeated string pets = 8;
+}
+
+message Pet {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Timestamp adopted = 3;
+  string kind = 4;
+}
+
+message Feeds {
+  repeated Feed feeds = 1;
+}
+
+message Feed {
+  google.protobuf.Timestamp feeded = 1;
+  string feeder = 2;
+  double amount = 3;
+  string unit = 4;
+}
