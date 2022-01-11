@@ -26,13 +26,13 @@ const Credential$json = const {
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
-    const {'1': 'oauthtype', '3': 3, '4': 1, '5': 14, '6': '.gonyom.OAuthType', '10': 'oauthtype'},
+    const {'1': 'oauthtype', '3': 3, '4': 1, '5': 14, '6': '.protonyom.OAuthType', '10': 'oauthtype'},
     const {'1': 'oauthid', '3': 4, '4': 1, '5': 9, '10': 'oauthid'},
   ],
 };
 
 /// Descriptor for `Credential`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List credentialDescriptor = $convert.base64Decode('CgpDcmVkZW50aWFsEg4KAmlkGAEgASgJUgJpZBIaCghwYXNzd29yZBgCIAEoCVIIcGFzc3dvcmQSLwoJb2F1dGh0eXBlGAMgASgOMhEuZ29ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBCABKAlSB29hdXRoaWQ=');
+final $typed_data.Uint8List credentialDescriptor = $convert.base64Decode('CgpDcmVkZW50aWFsEg4KAmlkGAEgASgJUgJpZBIaCghwYXNzd29yZBgCIAEoCVIIcGFzc3dvcmQSMgoJb2F1dGh0eXBlGAMgASgOMhQucHJvdG9ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBCABKAlSB29hdXRoaWQ=');
 @$core.Deprecated('Use accountDescriptor instead')
 const Account$json = const {
   '1': 'Account',
@@ -41,7 +41,7 @@ const Account$json = const {
     const {'1': 'email', '3': 2, '4': 1, '5': 9, '10': 'email'},
     const {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'photourl', '3': 4, '4': 1, '5': 9, '10': 'photourl'},
-    const {'1': 'oauthtype', '3': 5, '4': 1, '5': 14, '6': '.gonyom.OAuthType', '10': 'oauthtype'},
+    const {'1': 'oauthtype', '3': 5, '4': 1, '5': 14, '6': '.protonyom.OAuthType', '10': 'oauthtype'},
     const {'1': 'oauthid', '3': 6, '4': 1, '5': 9, '10': 'oauthid'},
     const {'1': 'signedup', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'signedup'},
     const {'1': 'pets', '3': 8, '4': 3, '5': 9, '10': 'pets'},
@@ -49,7 +49,7 @@ const Account$json = const {
 };
 
 /// Descriptor for `Account`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List accountDescriptor = $convert.base64Decode('CgdBY2NvdW50Eg4KAmlkGAEgASgJUgJpZBIUCgVlbWFpbBgCIAEoCVIFZW1haWwSEgoEbmFtZRgDIAEoCVIEbmFtZRIaCghwaG90b3VybBgEIAEoCVIIcGhvdG91cmwSLwoJb2F1dGh0eXBlGAUgASgOMhEuZ29ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBiABKAlSB29hdXRoaWQSNgoIc2lnbmVkdXAYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUghzaWduZWR1cBISCgRwZXRzGAggAygJUgRwZXRz');
+final $typed_data.Uint8List accountDescriptor = $convert.base64Decode('CgdBY2NvdW50Eg4KAmlkGAEgASgJUgJpZBIUCgVlbWFpbBgCIAEoCVIFZW1haWwSEgoEbmFtZRgDIAEoCVIEbmFtZRIaCghwaG90b3VybBgEIAEoCVIIcGhvdG91cmwSMgoJb2F1dGh0eXBlGAUgASgOMhQucHJvdG9ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBiABKAlSB29hdXRoaWQSNgoIc2lnbmVkdXAYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUghzaWduZWR1cBISCgRwZXRzGAggAygJUgRwZXRz');
 @$core.Deprecated('Use petDescriptor instead')
 const Pet$json = const {
   '1': 'Pet',
@@ -67,12 +67,12 @@ final $typed_data.Uint8List petDescriptor = $convert.base64Decode('CgNQZXQSDgoCa
 const Feeds$json = const {
   '1': 'Feeds',
   '2': const [
-    const {'1': 'feeds', '3': 1, '4': 3, '5': 11, '6': '.gonyom.Feed', '10': 'feeds'},
+    const {'1': 'feeds', '3': 1, '4': 3, '5': 11, '6': '.protonyom.Feed', '10': 'feeds'},
   ],
 };
 
 /// Descriptor for `Feeds`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List feedsDescriptor = $convert.base64Decode('CgVGZWVkcxIiCgVmZWVkcxgBIAMoCzIMLmdvbnlvbS5GZWVkUgVmZWVkcw==');
+final $typed_data.Uint8List feedsDescriptor = $convert.base64Decode('CgVGZWVkcxIlCgVmZWVkcxgBIAMoCzIPLnByb3RvbnlvbS5GZWVkUgVmZWVkcw==');
 @$core.Deprecated('Use feedDescriptor instead')
 const Feed$json = const {
   '1': 'Feed',

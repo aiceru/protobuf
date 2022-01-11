@@ -2,7 +2,6 @@
 
 SRC_DIR=$(pwd)
 DART_OUT=$SRC_DIR/dartnyom
-GO_OUT=$SRC_DIR
 GO_DIR=$SRC_DIR/gonyom
 
 rm -rf $GO_DIR
@@ -13,7 +12,7 @@ mkdir -p $DART_OUT
 protoc \
 -I=$SRC_DIR \
 --dart_out=$DART_OUT \
---go_out=$GO_OUT \
+--go_out=$SRC_DIR \
 --go_opt=module=github.com/aiceru/protonyom \
 $SRC_DIR/ohmnyom.proto
 

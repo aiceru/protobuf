@@ -1,5 +1,5 @@
 syntax = "proto3";
-package gonyom;
+package protonyom;
 
 option go_package = "github.com/aiceru/protonyom/gonyom";
 
