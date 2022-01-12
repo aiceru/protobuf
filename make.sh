@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SRC_DIR=$(pwd)
-DART_OUT=$SRC_DIR/dartnyom
+DART_OUT=$SRC_DIR/dartnyom/lib
 GO_DIR=$SRC_DIR/gonyom
 
 rm -rf $GO_DIR
@@ -17,9 +17,9 @@ protoc \
 --go_opt=module=github.com/aiceru/protonyom \
 $SRC_DIR/ohmnyom.proto
 
-if [ "$(ls -A $GO_DIR)" ]; then
-#  cd $GO_DIR
-  go mod init github.com/aiceru/protonyom
-  go mod tidy
-  cd ..
-fi
+#if [ "$(ls -A $GO_DIR)" ]; then
+##  cd $GO_DIR
+#  go mod init github.com/aiceru/protonyom
+#  go mod tidy
+#  cd ..
+#fi
