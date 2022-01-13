@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.17.3
-// source: proto/sign_api.proto
+// source: sign_api.proto
 
 package gonyom
 
@@ -137,5 +137,5 @@ var SignApi_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/sign_api.proto",
+	Metadata: "sign_api.proto",
 }
