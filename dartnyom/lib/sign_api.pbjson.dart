@@ -30,6 +30,17 @@ const OAuthType$json = const {
 
 /// Descriptor for `OAuthType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List oAuthTypeDescriptor = $convert.base64Decode('CglPQXV0aFR5cGUSCAoETk9ORRAAEgoKBkdPT0dMRRABEgkKBUtBS0FPEAI=');
+@$core.Deprecated('Use timestampDescriptor instead')
+const Timestamp$json = const {
+  '1': 'Timestamp',
+  '2': const [
+    const {'1': 'seconds', '3': 1, '4': 1, '5': 3, '10': 'seconds'},
+    const {'1': 'nanos', '3': 2, '4': 1, '5': 5, '10': 'nanos'},
+  ],
+};
+
+/// Descriptor for `Timestamp`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List timestampDescriptor = $convert.base64Decode('CglUaW1lc3RhbXASGAoHc2Vjb25kcxgBIAEoA1IHc2Vjb25kcxIUCgVuYW5vcxgCIAEoBVIFbmFub3M=');
 @$core.Deprecated('Use emptyParamsDescriptor instead')
 const EmptyParams$json = const {
   '1': 'EmptyParams',
@@ -71,26 +82,26 @@ const Account$json = const {
     const {'1': 'photourl', '3': 4, '4': 1, '5': 9, '10': 'photourl'},
     const {'1': 'oauthtype', '3': 5, '4': 1, '5': 14, '6': '.protonyom.OAuthType', '10': 'oauthtype'},
     const {'1': 'oauthid', '3': 6, '4': 1, '5': 9, '10': 'oauthid'},
-    const {'1': 'signedup', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'signedup'},
+    const {'1': 'signedup', '3': 7, '4': 1, '5': 11, '6': '.protonyom.Timestamp', '10': 'signedup'},
     const {'1': 'pets', '3': 8, '4': 3, '5': 9, '10': 'pets'},
   ],
 };
 
 /// Descriptor for `Account`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List accountDescriptor = $convert.base64Decode('CgdBY2NvdW50Eg4KAmlkGAEgASgJUgJpZBIUCgVlbWFpbBgCIAEoCVIFZW1haWwSEgoEbmFtZRgDIAEoCVIEbmFtZRIaCghwaG90b3VybBgEIAEoCVIIcGhvdG91cmwSMgoJb2F1dGh0eXBlGAUgASgOMhQucHJvdG9ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBiABKAlSB29hdXRoaWQSNgoIc2lnbmVkdXAYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUghzaWduZWR1cBISCgRwZXRzGAggAygJUgRwZXRz');
+final $typed_data.Uint8List accountDescriptor = $convert.base64Decode('CgdBY2NvdW50Eg4KAmlkGAEgASgJUgJpZBIUCgVlbWFpbBgCIAEoCVIFZW1haWwSEgoEbmFtZRgDIAEoCVIEbmFtZRIaCghwaG90b3VybBgEIAEoCVIIcGhvdG91cmwSMgoJb2F1dGh0eXBlGAUgASgOMhQucHJvdG9ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBiABKAlSB29hdXRoaWQSMAoIc2lnbmVkdXAYByABKAsyFC5wcm90b255b20uVGltZXN0YW1wUghzaWduZWR1cBISCgRwZXRzGAggAygJUgRwZXRz');
 @$core.Deprecated('Use petDescriptor instead')
 const Pet$json = const {
   '1': 'Pet',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'adopted', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'adopted'},
+    const {'1': 'adopted', '3': 3, '4': 1, '5': 11, '6': '.protonyom.Timestamp', '10': 'adopted'},
     const {'1': 'kind', '3': 4, '4': 1, '5': 9, '10': 'kind'},
   ],
 };
 
 /// Descriptor for `Pet`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List petDescriptor = $convert.base64Decode('CgNQZXQSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSNAoHYWRvcHRlZBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2Fkb3B0ZWQSEgoEa2luZBgEIAEoCVIEa2luZA==');
+final $typed_data.Uint8List petDescriptor = $convert.base64Decode('CgNQZXQSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSLgoHYWRvcHRlZBgDIAEoCzIULnByb3RvbnlvbS5UaW1lc3RhbXBSB2Fkb3B0ZWQSEgoEa2luZBgEIAEoCVIEa2luZA==');
 @$core.Deprecated('Use feedsDescriptor instead')
 const Feeds$json = const {
   '1': 'Feeds',
@@ -105,7 +116,7 @@ final $typed_data.Uint8List feedsDescriptor = $convert.base64Decode('CgVGZWVkcxI
 const Feed$json = const {
   '1': 'Feed',
   '2': const [
-    const {'1': 'feeded', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'feeded'},
+    const {'1': 'feeded', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Timestamp', '10': 'feeded'},
     const {'1': 'feeder', '3': 2, '4': 1, '5': 9, '10': 'feeder'},
     const {'1': 'amount', '3': 3, '4': 1, '5': 1, '10': 'amount'},
     const {'1': 'unit', '3': 4, '4': 1, '5': 9, '10': 'unit'},
@@ -113,4 +124,4 @@ const Feed$json = const {
 };
 
 /// Descriptor for `Feed`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List feedDescriptor = $convert.base64Decode('CgRGZWVkEjIKBmZlZWRlZBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSBmZlZWRlZBIWCgZmZWVkZXIYAiABKAlSBmZlZWRlchIWCgZhbW91bnQYAyABKAFSBmFtb3VudBISCgR1bml0GAQgASgJUgR1bml0');
+final $typed_data.Uint8List feedDescriptor = $convert.base64Decode('CgRGZWVkEiwKBmZlZWRlZBgBIAEoCzIULnByb3RvbnlvbS5UaW1lc3RhbXBSBmZlZWRlZBIWCgZmZWVkZXIYAiABKAlSBmZlZWRlchIWCgZhbW91bnQYAyABKAFSBmFtb3VudBISCgR1bml0GAQgASgJUgR1bml0');
