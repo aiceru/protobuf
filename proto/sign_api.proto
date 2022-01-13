@@ -5,17 +5,33 @@ option go_package = "github.com/aiceru/protonyom/gonyom";
 
 import "google/protobuf/timestamp.proto";
 
+message EmptyParams {}
+
+service SignApi {
+  rpc SignIn(SignInRequest) returns (SignInReply) {}
+  rpc SignOut(EmptyParams) returns (EmptyParams) {}
+}
+
+enum ErrorCode {
+  OK = 0;
+}
+
 enum OAuthType {
   NONE = 0;
   GOOGLE = 1;
   KAKAO = 2;
 }
 
-message Credential {
+message SignInRequest {
   string id = 1;
   string password = 2;
   OAuthType oauthtype = 3;
   string oauthid = 4;
+}
+
+message SignInReply {
+  ErrorCode error = 1;
+  Account account = 2;
 }
 
 message Account {

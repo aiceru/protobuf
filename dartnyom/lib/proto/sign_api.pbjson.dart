@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: ohmnyom.proto
+//  source: proto/sign_api.proto
 //
 // @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
@@ -8,6 +8,16 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use errorCodeDescriptor instead')
+const ErrorCode$json = const {
+  '1': 'ErrorCode',
+  '2': const [
+    const {'1': 'OK', '2': 0},
+  ],
+};
+
+/// Descriptor for `ErrorCode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List errorCodeDescriptor = $convert.base64Decode('CglFcnJvckNvZGUSBgoCT0sQAA==');
 @$core.Deprecated('Use oAuthTypeDescriptor instead')
 const OAuthType$json = const {
   '1': 'OAuthType',
@@ -20,9 +30,16 @@ const OAuthType$json = const {
 
 /// Descriptor for `OAuthType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List oAuthTypeDescriptor = $convert.base64Decode('CglPQXV0aFR5cGUSCAoETk9ORRAAEgoKBkdPT0dMRRABEgkKBUtBS0FPEAI=');
-@$core.Deprecated('Use credentialDescriptor instead')
-const Credential$json = const {
-  '1': 'Credential',
+@$core.Deprecated('Use emptyParamsDescriptor instead')
+const EmptyParams$json = const {
+  '1': 'EmptyParams',
+};
+
+/// Descriptor for `EmptyParams`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List emptyParamsDescriptor = $convert.base64Decode('CgtFbXB0eVBhcmFtcw==');
+@$core.Deprecated('Use signInRequestDescriptor instead')
+const SignInRequest$json = const {
+  '1': 'SignInRequest',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
@@ -31,8 +48,19 @@ const Credential$json = const {
   ],
 };
 
-/// Descriptor for `Credential`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List credentialDescriptor = $convert.base64Decode('CgpDcmVkZW50aWFsEg4KAmlkGAEgASgJUgJpZBIaCghwYXNzd29yZBgCIAEoCVIIcGFzc3dvcmQSMgoJb2F1dGh0eXBlGAMgASgOMhQucHJvdG9ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBCABKAlSB29hdXRoaWQ=');
+/// Descriptor for `SignInRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signInRequestDescriptor = $convert.base64Decode('Cg1TaWduSW5SZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZBIaCghwYXNzd29yZBgCIAEoCVIIcGFzc3dvcmQSMgoJb2F1dGh0eXBlGAMgASgOMhQucHJvdG9ueW9tLk9BdXRoVHlwZVIJb2F1dGh0eXBlEhgKB29hdXRoaWQYBCABKAlSB29hdXRoaWQ=');
+@$core.Deprecated('Use signInReplyDescriptor instead')
+const SignInReply$json = const {
+  '1': 'SignInReply',
+  '2': const [
+    const {'1': 'error', '3': 1, '4': 1, '5': 14, '6': '.protonyom.ErrorCode', '10': 'error'},
+    const {'1': 'account', '3': 2, '4': 1, '5': 11, '6': '.protonyom.Account', '10': 'account'},
+  ],
+};
+
+/// Descriptor for `SignInReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signInReplyDescriptor = $convert.base64Decode('CgtTaWduSW5SZXBseRIqCgVlcnJvchgBIAEoDjIULnByb3RvbnlvbS5FcnJvckNvZGVSBWVycm9yEiwKB2FjY291bnQYAiABKAsyEi5wcm90b255b20uQWNjb3VudFIHYWNjb3VudA==');
 @$core.Deprecated('Use accountDescriptor instead')
 const Account$json = const {
   '1': 'Account',

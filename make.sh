@@ -3,6 +3,7 @@
 SRC_DIR=$(pwd)
 DART_OUT=$SRC_DIR/dartnyom/lib
 GO_DIR=$SRC_DIR/gonyom
+PROTO_DIR=$SRC_DIR/proto
 
 rm -rf $GO_DIR
 rm -rf $DART_OUT
@@ -11,7 +12,9 @@ mkdir -p $DART_OUT
 
 protoc \
 -I=$SRC_DIR \
---dart_out=$DART_OUT \
+--dart_out=grpc:$DART_OUT \
 --go_out=$SRC_DIR \
 --go_opt=module=github.com/aiceru/protonyom \
-$SRC_DIR/ohmnyom.proto
+--go-grpc_out=$SRC_DIR \
+--go-grpc_opt=module=github.com/aiceru/protonyom \
+$PROTO_DIR/sign_api.proto
