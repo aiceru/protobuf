@@ -16,4 +16,4 @@ protoc \
 --go_opt=module=github.com/aiceru/protonyom \
 --go-grpc_out=$SRC_DIR \
 --go-grpc_opt=module=github.com/aiceru/protonyom \
-$SRC_DIR/sign_api.proto
+$SRC_DIR/*.proto \

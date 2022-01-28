@@ -1,0 +1,43 @@
+syntax = "proto3";
+package protonyom;
+
+option go_package = "github.com/aiceru/protonyom/gonyom";
+
+message OAuthInfo {
+  string id = 1;
+  string email = 2;
+}
+
+message Timestamp {
+  int64 seconds = 1;
+  int32 nanos = 2;
+}
+
+// login 시 app 에 보내줘야 할 정보
+message Account {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  map<string, OAuthInfo> oauthinfo = 4;
+  string photourl = 5;
+  Timestamp signedup = 6;
+  repeated string pets = 7;
+}
+
+message Pet {
+  string id = 1;
+  string name = 2;
+  Timestamp adopted = 3;
+  string kind = 4;
+}
+
+message Feeds {
+  repeated Feed feeds = 1;
+}
+
+message Feed {
+  Timestamp feeded = 1;
+  string feeder = 2;
+  double amount = 3;
+  string unit = 4;
+}

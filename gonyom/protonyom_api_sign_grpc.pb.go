@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.17.3
-// source: sign_api.proto
+// source: protonyom_api_sign.proto
 
 package gonyom
 
@@ -22,7 +22,8 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SignApiClient interface {
-	SignIn(ctx context.Context, in *SignInRequest, opts ...grpc.CallOption) (*SignInReply, error)
+	SignIn(ctx context.Context, in *SignInRequest, opts ...grpc.CallOption) (*SignReply, error)
+	SignUp(ctx context.Context, in *SignUpRequest, opts ...grpc.CallOption) (*SignReply, error)
 	SignOut(ctx context.Context, in *EmptyParams, opts ...grpc.CallOption) (*EmptyParams, error)
 }
 
@@ -34,9 +35,18 @@ func NewSignApiClient(cc grpc.ClientConnInterface) SignApiClient {
 	return &signApiClient{cc}
 }
 
-func (c *signApiClient) SignIn(ctx context.Context, in *SignInRequest, opts ...grpc.CallOption) (*SignInReply, error) {
-	out := new(SignInReply)
+func (c *signApiClient) SignIn(ctx context.Context, in *SignInRequest, opts ...grpc.CallOption) (*SignReply, error) {
+	out := new(SignReply)
 	err := c.cc.Invoke(ctx, "/protonyom.SignApi/SignIn", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *signApiClient) SignUp(ctx context.Context, in *SignUpRequest, opts ...grpc.CallOption) (*SignReply, error) {
+	out := new(SignReply)
+	err := c.cc.Invoke(ctx, "/protonyom.SignApi/SignUp", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -56,7 +66,8 @@ func (c *signApiClient) SignOut(ctx context.Context, in *EmptyParams, opts ...gr
 // All implementations must embed UnimplementedSignApiServer
 // for forward compatibility
 type SignApiServer interface {
-	SignIn(context.Context, *SignInRequest) (*SignInReply, error)
+	SignIn(context.Context, *SignInRequest) (*SignReply, error)
+	SignUp(context.Context, *SignUpRequest) (*SignReply, error)
 	SignOut(context.Context, *EmptyParams) (*EmptyParams, error)
 	mustEmbedUnimplementedSignApiServer()
 }
@@ -65,8 +76,11 @@ type SignApiServer interface {
 type UnimplementedSignApiServer struct {
 }
 
-func (UnimplementedSignApiServer) SignIn(context.Context, *SignInRequest) (*SignInReply, error) {
+func (UnimplementedSignApiServer) SignIn(context.Context, *SignInRequest) (*SignReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SignIn not implemented")
+}
+func (UnimplementedSignApiServer) SignUp(context.Context, *SignUpRequest) (*SignReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SignUp not implemented")
 }
 func (UnimplementedSignApiServer) SignOut(context.Context, *EmptyParams) (*EmptyParams, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SignOut not implemented")
@@ -102,6 +116,24 @@ func _SignApi_SignIn_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SignApi_SignUp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SignUpRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SignApiServer).SignUp(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protonyom.SignApi/SignUp",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SignApiServer).SignUp(ctx, req.(*SignUpRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _SignApi_SignOut_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(EmptyParams)
 	if err := dec(in); err != nil {
@@ -132,10 +164,14 @@ var SignApi_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SignApi_SignIn_Handler,
 		},
 		{
+			MethodName: "SignUp",
+			Handler:    _SignApi_SignUp_Handler,
+		},
+		{
 			MethodName: "SignOut",
 			Handler:    _SignApi_SignOut_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "sign_api.proto",
+	Metadata: "protonyom_api_sign.proto",
 }

@@ -1,0 +1,35 @@
+syntax = "proto3";
+package protonyom;
+
+option go_package = "github.com/aiceru/protonyom/gonyom";
+
+import "protonyom_models.proto";
+
+service AccountApi {
+  rpc Get(GetAccountRequest) returns (GetAccountReply) {}
+  rpc Update(UpdateAccountRequest) returns (UpdateAccountReply) {}
+  rpc Delete(DeleteAccountRequest) returns (DeleteAccountReply) {}
+}
+
+message GetAccountRequest {
+  string id = 1;
+}
+
+message GetAccountReply {
+  Account account = 1;
+}
+
+message UpdateAccountRequest {
+  Account account = 1;
+}
+
+message UpdateAccountReply {
+  Account account = 1;
+}
+
+message DeleteAccountRequest {
+  string id = 1;
+}
+
+message DeleteAccountReply {
+}

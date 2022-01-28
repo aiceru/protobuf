@@ -1,0 +1,43 @@
+syntax = "proto3";
+package protonyom;
+
+option go_package = "github.com/aiceru/protonyom/gonyom";
+
+import "protonyom_models.proto";
+
+service SignApi {
+  rpc SignIn(SignInRequest) returns (SignReply) {}
+  rpc SignUp(SignUpRequest) returns (SignReply) {}
+  rpc SignOut(EmptyParams) returns (EmptyParams) {}
+}
+
+message EmptyParams {}
+
+message SignUpRequest {
+  string name = 1;
+  string email = 2;
+  oneof credential {
+    string password = 3;
+    OAuthInfo oauthinfo = 4;
+  }
+  string oauthprovider = 5;
+  string photourl = 6;
+}
+
+message EmailCred {
+  string email = 1;
+  string password = 2;
+}
+
+message SignInRequest {
+  oneof credential {
+    EmailCred emailcred = 1;
+    OAuthInfo oauthinfo = 2;
+  }
+  string oauthprovider = 3;
+}
+
+message SignReply {
+  Account account = 1;
+  string token = 2;
+}

@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: sign_api.proto
+//  source: protonyom_models.proto
 //
 // @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
@@ -10,9 +10,66 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'sign_api.pbenum.dart';
+class OAuthInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OAuthInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
+    ..hasRequiredFields = false
+  ;
 
-export 'sign_api.pbenum.dart';
+  OAuthInfo._() : super();
+  factory OAuthInfo({
+    $core.String? id,
+    $core.String? email,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (email != null) {
+      _result.email = email;
+    }
+    return _result;
+  }
+  factory OAuthInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory OAuthInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  OAuthInfo clone() => OAuthInfo()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  OAuthInfo copyWith(void Function(OAuthInfo) updates) => super.copyWith((message) => updates(message as OAuthInfo)) as OAuthInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static OAuthInfo create() => OAuthInfo._();
+  OAuthInfo createEmptyInstance() => create();
+  static $pb.PbList<OAuthInfo> createRepeated() => $pb.PbList<OAuthInfo>();
+  @$core.pragma('dart2js:noInline')
+  static OAuthInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OAuthInfo>(create);
+  static OAuthInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get email => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set email($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEmail() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEmail() => clearField(2);
+}
 
 class Timestamp extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Timestamp', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
@@ -75,208 +132,25 @@ class Timestamp extends $pb.GeneratedMessage {
   void clearNanos() => clearField(2);
 }
 
-class EmptyParams extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EmptyParams', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
-
-  EmptyParams._() : super();
-  factory EmptyParams() => create();
-  factory EmptyParams.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EmptyParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  EmptyParams clone() => EmptyParams()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  EmptyParams copyWith(void Function(EmptyParams) updates) => super.copyWith((message) => updates(message as EmptyParams)) as EmptyParams; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static EmptyParams create() => EmptyParams._();
-  EmptyParams createEmptyInstance() => create();
-  static $pb.PbList<EmptyParams> createRepeated() => $pb.PbList<EmptyParams>();
-  @$core.pragma('dart2js:noInline')
-  static EmptyParams getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EmptyParams>(create);
-  static EmptyParams? _defaultInstance;
-}
-
-class SignInRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignInRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'password')
-    ..e<OAuthType>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthtype', $pb.PbFieldType.OE, defaultOrMaker: OAuthType.NONE, valueOf: OAuthType.valueOf, enumValues: OAuthType.values)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthid')
-    ..hasRequiredFields = false
-  ;
-
-  SignInRequest._() : super();
-  factory SignInRequest({
-    $core.String? id,
-    $core.String? password,
-    OAuthType? oauthtype,
-    $core.String? oauthid,
-  }) {
-    final _result = create();
-    if (id != null) {
-      _result.id = id;
-    }
-    if (password != null) {
-      _result.password = password;
-    }
-    if (oauthtype != null) {
-      _result.oauthtype = oauthtype;
-    }
-    if (oauthid != null) {
-      _result.oauthid = oauthid;
-    }
-    return _result;
-  }
-  factory SignInRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SignInRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SignInRequest clone() => SignInRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SignInRequest copyWith(void Function(SignInRequest) updates) => super.copyWith((message) => updates(message as SignInRequest)) as SignInRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SignInRequest create() => SignInRequest._();
-  SignInRequest createEmptyInstance() => create();
-  static $pb.PbList<SignInRequest> createRepeated() => $pb.PbList<SignInRequest>();
-  @$core.pragma('dart2js:noInline')
-  static SignInRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SignInRequest>(create);
-  static SignInRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set id($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get password => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set password($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasPassword() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearPassword() => clearField(2);
-
-  @$pb.TagNumber(3)
-  OAuthType get oauthtype => $_getN(2);
-  @$pb.TagNumber(3)
-  set oauthtype(OAuthType v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasOauthtype() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearOauthtype() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get oauthid => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set oauthid($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasOauthid() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearOauthid() => clearField(4);
-}
-
-class SignInReply extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignInReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..e<ErrorCode>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'error', $pb.PbFieldType.OE, defaultOrMaker: ErrorCode.OK, valueOf: ErrorCode.valueOf, enumValues: ErrorCode.values)
-    ..aOM<Account>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: Account.create)
-    ..hasRequiredFields = false
-  ;
-
-  SignInReply._() : super();
-  factory SignInReply({
-    ErrorCode? error,
-    Account? account,
-  }) {
-    final _result = create();
-    if (error != null) {
-      _result.error = error;
-    }
-    if (account != null) {
-      _result.account = account;
-    }
-    return _result;
-  }
-  factory SignInReply.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SignInReply.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  SignInReply clone() => SignInReply()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SignInReply copyWith(void Function(SignInReply) updates) => super.copyWith((message) => updates(message as SignInReply)) as SignInReply; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static SignInReply create() => SignInReply._();
-  SignInReply createEmptyInstance() => create();
-  static $pb.PbList<SignInReply> createRepeated() => $pb.PbList<SignInReply>();
-  @$core.pragma('dart2js:noInline')
-  static SignInReply getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SignInReply>(create);
-  static SignInReply? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  ErrorCode get error => $_getN(0);
-  @$pb.TagNumber(1)
-  set error(ErrorCode v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasError() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearError() => clearField(1);
-
-  @$pb.TagNumber(2)
-  Account get account => $_getN(1);
-  @$pb.TagNumber(2)
-  set account(Account v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasAccount() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearAccount() => clearField(2);
-  @$pb.TagNumber(2)
-  Account ensureAccount() => $_ensure(1);
-}
-
 class Account extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Account', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
-    ..e<OAuthType>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthtype', $pb.PbFieldType.OE, defaultOrMaker: OAuthType.NONE, valueOf: OAuthType.valueOf, enumValues: OAuthType.values)
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthid')
-    ..aOM<Timestamp>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signedup', subBuilder: Timestamp.create)
-    ..pPS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
+    ..m<$core.String, OAuthInfo>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', entryClassName: 'Account.OauthinfoEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: OAuthInfo.create, packageName: const $pb.PackageName('protonyom'))
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
+    ..aOM<Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signedup', subBuilder: Timestamp.create)
+    ..pPS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets')
     ..hasRequiredFields = false
   ;
 
   Account._() : super();
   factory Account({
     $core.String? id,
-    $core.String? email,
     $core.String? name,
+    $core.String? email,
+    $core.Map<$core.String, OAuthInfo>? oauthinfo,
     $core.String? photourl,
-    OAuthType? oauthtype,
-    $core.String? oauthid,
     Timestamp? signedup,
     $core.Iterable<$core.String>? pets,
   }) {
@@ -284,20 +158,17 @@ class Account extends $pb.GeneratedMessage {
     if (id != null) {
       _result.id = id;
     }
-    if (email != null) {
-      _result.email = email;
-    }
     if (name != null) {
       _result.name = name;
     }
+    if (email != null) {
+      _result.email = email;
+    }
+    if (oauthinfo != null) {
+      _result.oauthinfo.addAll(oauthinfo);
+    }
     if (photourl != null) {
       _result.photourl = photourl;
-    }
-    if (oauthtype != null) {
-      _result.oauthtype = oauthtype;
-    }
-    if (oauthid != null) {
-      _result.oauthid = oauthid;
     }
     if (signedup != null) {
       _result.signedup = signedup;
@@ -338,63 +209,48 @@ class Account extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get email => $_getSZ(1);
+  $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
-  set email($core.String v) { $_setString(1, v); }
+  set name($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasEmail() => $_has(1);
+  $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEmail() => clearField(2);
+  void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get name => $_getSZ(2);
+  $core.String get email => $_getSZ(2);
   @$pb.TagNumber(3)
-  set name($core.String v) { $_setString(2, v); }
+  set email($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasName() => $_has(2);
+  $core.bool hasEmail() => $_has(2);
   @$pb.TagNumber(3)
-  void clearName() => clearField(3);
+  void clearEmail() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get photourl => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set photourl($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasPhotourl() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearPhotourl() => clearField(4);
+  $core.Map<$core.String, OAuthInfo> get oauthinfo => $_getMap(3);
 
   @$pb.TagNumber(5)
-  OAuthType get oauthtype => $_getN(4);
+  $core.String get photourl => $_getSZ(4);
   @$pb.TagNumber(5)
-  set oauthtype(OAuthType v) { setField(5, v); }
+  set photourl($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasOauthtype() => $_has(4);
+  $core.bool hasPhotourl() => $_has(4);
   @$pb.TagNumber(5)
-  void clearOauthtype() => clearField(5);
+  void clearPhotourl() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get oauthid => $_getSZ(5);
+  Timestamp get signedup => $_getN(5);
   @$pb.TagNumber(6)
-  set oauthid($core.String v) { $_setString(5, v); }
+  set signedup(Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasOauthid() => $_has(5);
+  $core.bool hasSignedup() => $_has(5);
   @$pb.TagNumber(6)
-  void clearOauthid() => clearField(6);
+  void clearSignedup() => clearField(6);
+  @$pb.TagNumber(6)
+  Timestamp ensureSignedup() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  Timestamp get signedup => $_getN(6);
-  @$pb.TagNumber(7)
-  set signedup(Timestamp v) { setField(7, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasSignedup() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearSignedup() => clearField(7);
-  @$pb.TagNumber(7)
-  Timestamp ensureSignedup() => $_ensure(6);
-
-  @$pb.TagNumber(8)
-  $core.List<$core.String> get pets => $_getList(7);
+  $core.List<$core.String> get pets => $_getList(6);
 }
 
 class Pet extends $pb.GeneratedMessage {
