@@ -137,10 +137,11 @@ class Account extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
-    ..m<$core.String, OAuthInfo>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', entryClassName: 'Account.OauthinfoEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: OAuthInfo.create, packageName: const $pb.PackageName('protonyom'))
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
-    ..aOM<Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signedup', subBuilder: Timestamp.create)
-    ..pPS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets')
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasPassword', protoName: 'hasPassword')
+    ..m<$core.String, OAuthInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', entryClassName: 'Account.OauthinfoEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: OAuthInfo.create, packageName: const $pb.PackageName('protonyom'))
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
+    ..aOM<Timestamp>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signedup', subBuilder: Timestamp.create)
+    ..pPS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets')
     ..hasRequiredFields = false
   ;
 
@@ -149,6 +150,7 @@ class Account extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.String? email,
+    $core.bool? hasPassword,
     $core.Map<$core.String, OAuthInfo>? oauthinfo,
     $core.String? photourl,
     Timestamp? signedup,
@@ -163,6 +165,9 @@ class Account extends $pb.GeneratedMessage {
     }
     if (email != null) {
       _result.email = email;
+    }
+    if (hasPassword != null) {
+      _result.hasPassword = hasPassword;
     }
     if (oauthinfo != null) {
       _result.oauthinfo.addAll(oauthinfo);
@@ -227,30 +232,39 @@ class Account extends $pb.GeneratedMessage {
   void clearEmail() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.Map<$core.String, OAuthInfo> get oauthinfo => $_getMap(3);
+  $core.bool get hasPassword => $_getBF(3);
+  @$pb.TagNumber(4)
+  set hasPassword($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasHasPassword() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearHasPassword() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get photourl => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set photourl($core.String v) { $_setString(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasPhotourl() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearPhotourl() => clearField(5);
+  $core.Map<$core.String, OAuthInfo> get oauthinfo => $_getMap(4);
 
   @$pb.TagNumber(6)
-  Timestamp get signedup => $_getN(5);
+  $core.String get photourl => $_getSZ(5);
   @$pb.TagNumber(6)
-  set signedup(Timestamp v) { setField(6, v); }
+  set photourl($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasSignedup() => $_has(5);
+  $core.bool hasPhotourl() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSignedup() => clearField(6);
-  @$pb.TagNumber(6)
-  Timestamp ensureSignedup() => $_ensure(5);
+  void clearPhotourl() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.List<$core.String> get pets => $_getList(6);
+  Timestamp get signedup => $_getN(6);
+  @$pb.TagNumber(7)
+  set signedup(Timestamp v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasSignedup() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSignedup() => clearField(7);
+  @$pb.TagNumber(7)
+  Timestamp ensureSignedup() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $core.List<$core.String> get pets => $_getList(7);
 }
 
 class Pet extends $pb.GeneratedMessage {

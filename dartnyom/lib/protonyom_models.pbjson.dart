@@ -37,10 +37,11 @@ const Account$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'email', '3': 3, '4': 1, '5': 9, '10': 'email'},
-    const {'1': 'oauthinfo', '3': 4, '4': 3, '5': 11, '6': '.protonyom.Account.OauthinfoEntry', '10': 'oauthinfo'},
-    const {'1': 'photourl', '3': 5, '4': 1, '5': 9, '10': 'photourl'},
-    const {'1': 'signedup', '3': 6, '4': 1, '5': 11, '6': '.protonyom.Timestamp', '10': 'signedup'},
-    const {'1': 'pets', '3': 7, '4': 3, '5': 9, '10': 'pets'},
+    const {'1': 'hasPassword', '3': 4, '4': 1, '5': 8, '10': 'hasPassword'},
+    const {'1': 'oauthinfo', '3': 5, '4': 3, '5': 11, '6': '.protonyom.Account.OauthinfoEntry', '10': 'oauthinfo'},
+    const {'1': 'photourl', '3': 6, '4': 1, '5': 9, '10': 'photourl'},
+    const {'1': 'signedup', '3': 7, '4': 1, '5': 11, '6': '.protonyom.Timestamp', '10': 'signedup'},
+    const {'1': 'pets', '3': 8, '4': 3, '5': 9, '10': 'pets'},
   ],
   '3': const [Account_OauthinfoEntry$json],
 };
@@ -56,7 +57,7 @@ const Account_OauthinfoEntry$json = const {
 };
 
 /// Descriptor for `Account`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List accountDescriptor = $convert.base64Decode('CgdBY2NvdW50Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhQKBWVtYWlsGAMgASgJUgVlbWFpbBI/CglvYXV0aGluZm8YBCADKAsyIS5wcm90b255b20uQWNjb3VudC5PYXV0aGluZm9FbnRyeVIJb2F1dGhpbmZvEhoKCHBob3RvdXJsGAUgASgJUghwaG90b3VybBIwCghzaWduZWR1cBgGIAEoCzIULnByb3RvbnlvbS5UaW1lc3RhbXBSCHNpZ25lZHVwEhIKBHBldHMYByADKAlSBHBldHMaUgoOT2F1dGhpbmZvRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSKgoFdmFsdWUYAiABKAsyFC5wcm90b255b20uT0F1dGhJbmZvUgV2YWx1ZToCOAE=');
+final $typed_data.Uint8List accountDescriptor = $convert.base64Decode('CgdBY2NvdW50Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhQKBWVtYWlsGAMgASgJUgVlbWFpbBIgCgtoYXNQYXNzd29yZBgEIAEoCFILaGFzUGFzc3dvcmQSPwoJb2F1dGhpbmZvGAUgAygLMiEucHJvdG9ueW9tLkFjY291bnQuT2F1dGhpbmZvRW50cnlSCW9hdXRoaW5mbxIaCghwaG90b3VybBgGIAEoCVIIcGhvdG91cmwSMAoIc2lnbmVkdXAYByABKAsyFC5wcm90b255b20uVGltZXN0YW1wUghzaWduZWR1cBISCgRwZXRzGAggAygJUgRwZXRzGlIKDk9hdXRoaW5mb0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EioKBXZhbHVlGAIgASgLMhQucHJvdG9ueW9tLk9BdXRoSW5mb1IFdmFsdWU6AjgB');
 @$core.Deprecated('Use petDescriptor instead')
 const Pet$json = const {
   '1': 'Pet',

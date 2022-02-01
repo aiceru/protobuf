@@ -18,10 +18,11 @@ message Account {
   string id = 1;
   string name = 2;
   string email = 3;
-  map<string, OAuthInfo> oauthinfo = 4;
-  string photourl = 5;
-  Timestamp signedup = 6;
-  repeated string pets = 7;
+  bool hasPassword = 4;
+  map<string, OAuthInfo> oauthinfo = 5;
+  string photourl = 6;
+  Timestamp signedup = 7;
+  repeated string pets = 8;
 }
 
 message Pet {
