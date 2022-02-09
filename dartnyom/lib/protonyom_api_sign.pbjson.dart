@@ -8,13 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use emptyParamsDescriptor instead')
-const EmptyParams$json = const {
-  '1': 'EmptyParams',
-};
-
-/// Descriptor for `EmptyParams`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List emptyParamsDescriptor = $convert.base64Decode('CgtFbXB0eVBhcmFtcw==');
 @$core.Deprecated('Use signUpRequestDescriptor instead')
 const SignUpRequest$json = const {
   '1': 'SignUpRequest',

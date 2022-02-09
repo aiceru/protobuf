@@ -9,36 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'protonyom_models.pb.dart' as $2;
-
-class EmptyParams extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EmptyParams', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
-
-  EmptyParams._() : super();
-  factory EmptyParams() => create();
-  factory EmptyParams.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EmptyParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  EmptyParams clone() => EmptyParams()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  EmptyParams copyWith(void Function(EmptyParams) updates) => super.copyWith((message) => updates(message as EmptyParams)) as EmptyParams; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static EmptyParams create() => EmptyParams._();
-  EmptyParams createEmptyInstance() => create();
-  static $pb.PbList<EmptyParams> createRepeated() => $pb.PbList<EmptyParams>();
-  @$core.pragma('dart2js:noInline')
-  static EmptyParams getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EmptyParams>(create);
-  static EmptyParams? _defaultInstance;
-}
+import 'protonyom_models.pb.dart' as $3;
 
 enum SignUpRequest_Credential {
   password, 
@@ -57,7 +28,7 @@ class SignUpRequest extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'password')
-    ..aOM<$2.OAuthInfo>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', subBuilder: $2.OAuthInfo.create)
+    ..aOM<$3.OAuthInfo>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', subBuilder: $3.OAuthInfo.create)
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthprovider')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
     ..hasRequiredFields = false
@@ -68,7 +39,7 @@ class SignUpRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? email,
     $core.String? password,
-    $2.OAuthInfo? oauthinfo,
+    $3.OAuthInfo? oauthinfo,
     $core.String? oauthprovider,
     $core.String? photourl,
   }) {
@@ -145,15 +116,15 @@ class SignUpRequest extends $pb.GeneratedMessage {
   void clearPassword() => clearField(3);
 
   @$pb.TagNumber(4)
-  $2.OAuthInfo get oauthinfo => $_getN(3);
+  $3.OAuthInfo get oauthinfo => $_getN(3);
   @$pb.TagNumber(4)
-  set oauthinfo($2.OAuthInfo v) { setField(4, v); }
+  set oauthinfo($3.OAuthInfo v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasOauthinfo() => $_has(3);
   @$pb.TagNumber(4)
   void clearOauthinfo() => clearField(4);
   @$pb.TagNumber(4)
-  $2.OAuthInfo ensureOauthinfo() => $_ensure(3);
+  $3.OAuthInfo ensureOauthinfo() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get oauthprovider => $_getSZ(4);
@@ -250,7 +221,7 @@ class SignInRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignInRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOM<EmailCred>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'emailcred', subBuilder: EmailCred.create)
-    ..aOM<$2.OAuthInfo>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', subBuilder: $2.OAuthInfo.create)
+    ..aOM<$3.OAuthInfo>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', subBuilder: $3.OAuthInfo.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthprovider')
     ..hasRequiredFields = false
   ;
@@ -258,7 +229,7 @@ class SignInRequest extends $pb.GeneratedMessage {
   SignInRequest._() : super();
   factory SignInRequest({
     EmailCred? emailcred,
-    $2.OAuthInfo? oauthinfo,
+    $3.OAuthInfo? oauthinfo,
     $core.String? oauthprovider,
   }) {
     final _result = create();
@@ -309,15 +280,15 @@ class SignInRequest extends $pb.GeneratedMessage {
   EmailCred ensureEmailcred() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $2.OAuthInfo get oauthinfo => $_getN(1);
+  $3.OAuthInfo get oauthinfo => $_getN(1);
   @$pb.TagNumber(2)
-  set oauthinfo($2.OAuthInfo v) { setField(2, v); }
+  set oauthinfo($3.OAuthInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasOauthinfo() => $_has(1);
   @$pb.TagNumber(2)
   void clearOauthinfo() => clearField(2);
   @$pb.TagNumber(2)
-  $2.OAuthInfo ensureOauthinfo() => $_ensure(1);
+  $3.OAuthInfo ensureOauthinfo() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get oauthprovider => $_getSZ(2);
@@ -331,14 +302,14 @@ class SignInRequest extends $pb.GeneratedMessage {
 
 class SignReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$2.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $2.Account.create)
+    ..aOM<$3.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $3.Account.create)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
     ..hasRequiredFields = false
   ;
 
   SignReply._() : super();
   factory SignReply({
-    $2.Account? account,
+    $3.Account? account,
     $core.String? token,
   }) {
     final _result = create();
@@ -372,15 +343,15 @@ class SignReply extends $pb.GeneratedMessage {
   static SignReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.Account get account => $_getN(0);
+  $3.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($2.Account v) { setField(1, v); }
+  set account($3.Account v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Account ensureAccount() => $_ensure(0);
+  $3.Account ensureAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get token => $_getSZ(1);

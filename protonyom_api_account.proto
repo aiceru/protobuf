@@ -20,7 +20,8 @@ message GetAccountReply {
 }
 
 message UpdateAccountRequest {
-  Account account = 1;
+  string path = 1;
+  string value = 2;
 }
 
 message UpdateAccountReply {

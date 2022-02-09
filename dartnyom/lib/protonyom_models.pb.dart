@@ -10,6 +10,35 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class EmptyParams extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EmptyParams', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  EmptyParams._() : super();
+  factory EmptyParams() => create();
+  factory EmptyParams.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EmptyParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  EmptyParams clone() => EmptyParams()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EmptyParams copyWith(void Function(EmptyParams) updates) => super.copyWith((message) => updates(message as EmptyParams)) as EmptyParams; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EmptyParams create() => EmptyParams._();
+  EmptyParams createEmptyInstance() => create();
+  static $pb.PbList<EmptyParams> createRepeated() => $pb.PbList<EmptyParams>();
+  @$core.pragma('dart2js:noInline')
+  static EmptyParams getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EmptyParams>(create);
+  static EmptyParams? _defaultInstance;
+}
+
 class OAuthInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OAuthInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
@@ -71,67 +100,6 @@ class OAuthInfo extends $pb.GeneratedMessage {
   void clearEmail() => clearField(2);
 }
 
-class Timestamp extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Timestamp', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'seconds')
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nanos', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false
-  ;
-
-  Timestamp._() : super();
-  factory Timestamp({
-    $fixnum.Int64? seconds,
-    $core.int? nanos,
-  }) {
-    final _result = create();
-    if (seconds != null) {
-      _result.seconds = seconds;
-    }
-    if (nanos != null) {
-      _result.nanos = nanos;
-    }
-    return _result;
-  }
-  factory Timestamp.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Timestamp.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Timestamp clone() => Timestamp()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Timestamp copyWith(void Function(Timestamp) updates) => super.copyWith((message) => updates(message as Timestamp)) as Timestamp; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Timestamp create() => Timestamp._();
-  Timestamp createEmptyInstance() => create();
-  static $pb.PbList<Timestamp> createRepeated() => $pb.PbList<Timestamp>();
-  @$core.pragma('dart2js:noInline')
-  static Timestamp getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Timestamp>(create);
-  static Timestamp? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $fixnum.Int64 get seconds => $_getI64(0);
-  @$pb.TagNumber(1)
-  set seconds($fixnum.Int64 v) { $_setInt64(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasSeconds() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearSeconds() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.int get nanos => $_getIZ(1);
-  @$pb.TagNumber(2)
-  set nanos($core.int v) { $_setSignedInt32(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasNanos() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearNanos() => clearField(2);
-}
-
 class Account extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Account', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
@@ -140,7 +108,7 @@ class Account extends $pb.GeneratedMessage {
     ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasPassword', protoName: 'hasPassword')
     ..m<$core.String, OAuthInfo>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauthinfo', entryClassName: 'Account.OauthinfoEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: OAuthInfo.create, packageName: const $pb.PackageName('protonyom'))
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
-    ..aOM<Timestamp>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signedup', subBuilder: Timestamp.create)
+    ..aInt64(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signedup')
     ..pPS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets')
     ..hasRequiredFields = false
   ;
@@ -153,7 +121,7 @@ class Account extends $pb.GeneratedMessage {
     $core.bool? hasPassword,
     $core.Map<$core.String, OAuthInfo>? oauthinfo,
     $core.String? photourl,
-    Timestamp? signedup,
+    $fixnum.Int64? signedup,
     $core.Iterable<$core.String>? pets,
   }) {
     final _result = create();
@@ -253,15 +221,13 @@ class Account extends $pb.GeneratedMessage {
   void clearPhotourl() => clearField(6);
 
   @$pb.TagNumber(7)
-  Timestamp get signedup => $_getN(6);
+  $fixnum.Int64 get signedup => $_getI64(6);
   @$pb.TagNumber(7)
-  set signedup(Timestamp v) { setField(7, v); }
+  set signedup($fixnum.Int64 v) { $_setInt64(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasSignedup() => $_has(6);
   @$pb.TagNumber(7)
   void clearSignedup() => clearField(7);
-  @$pb.TagNumber(7)
-  Timestamp ensureSignedup() => $_ensure(6);
 
   @$pb.TagNumber(8)
   $core.List<$core.String> get pets => $_getList(7);
@@ -271,8 +237,10 @@ class Pet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Pet', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..aOM<Timestamp>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'adopted', subBuilder: Timestamp.create)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photourl')
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'adopted')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'family')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'species')
     ..hasRequiredFields = false
   ;
 
@@ -280,8 +248,10 @@ class Pet extends $pb.GeneratedMessage {
   factory Pet({
     $core.String? id,
     $core.String? name,
-    Timestamp? adopted,
-    $core.String? kind,
+    $core.String? photourl,
+    $fixnum.Int64? adopted,
+    $core.String? family,
+    $core.String? species,
   }) {
     final _result = create();
     if (id != null) {
@@ -290,11 +260,17 @@ class Pet extends $pb.GeneratedMessage {
     if (name != null) {
       _result.name = name;
     }
+    if (photourl != null) {
+      _result.photourl = photourl;
+    }
     if (adopted != null) {
       _result.adopted = adopted;
     }
-    if (kind != null) {
-      _result.kind = kind;
+    if (family != null) {
+      _result.family = family;
+    }
+    if (species != null) {
+      _result.species = species;
     }
     return _result;
   }
@@ -338,24 +314,40 @@ class Pet extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  Timestamp get adopted => $_getN(2);
+  $core.String get photourl => $_getSZ(2);
   @$pb.TagNumber(3)
-  set adopted(Timestamp v) { setField(3, v); }
+  set photourl($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasAdopted() => $_has(2);
+  $core.bool hasPhotourl() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAdopted() => clearField(3);
-  @$pb.TagNumber(3)
-  Timestamp ensureAdopted() => $_ensure(2);
+  void clearPhotourl() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get kind => $_getSZ(3);
+  $fixnum.Int64 get adopted => $_getI64(3);
   @$pb.TagNumber(4)
-  set kind($core.String v) { $_setString(3, v); }
+  set adopted($fixnum.Int64 v) { $_setInt64(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasKind() => $_has(3);
+  $core.bool hasAdopted() => $_has(3);
   @$pb.TagNumber(4)
-  void clearKind() => clearField(4);
+  void clearAdopted() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get family => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set family($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasFamily() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearFamily() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get species => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set species($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasSpecies() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSpecies() => clearField(6);
 }
 
 class Feeds extends $pb.GeneratedMessage {
@@ -401,7 +393,7 @@ class Feeds extends $pb.GeneratedMessage {
 
 class Feed extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Feed', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<Timestamp>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeded', subBuilder: Timestamp.create)
+    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeded')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeder')
     ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OD)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unit')
@@ -410,7 +402,7 @@ class Feed extends $pb.GeneratedMessage {
 
   Feed._() : super();
   factory Feed({
-    Timestamp? feeded,
+    $fixnum.Int64? feeded,
     $core.String? feeder,
     $core.double? amount,
     $core.String? unit,
@@ -452,15 +444,13 @@ class Feed extends $pb.GeneratedMessage {
   static Feed? _defaultInstance;
 
   @$pb.TagNumber(1)
-  Timestamp get feeded => $_getN(0);
+  $fixnum.Int64 get feeded => $_getI64(0);
   @$pb.TagNumber(1)
-  set feeded(Timestamp v) { setField(1, v); }
+  set feeded($fixnum.Int64 v) { $_setInt64(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasFeeded() => $_has(0);
   @$pb.TagNumber(1)
   void clearFeeded() => clearField(1);
-  @$pb.TagNumber(1)
-  Timestamp ensureFeeded() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get feeder => $_getSZ(1);

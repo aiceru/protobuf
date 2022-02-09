@@ -1,0 +1,51 @@
+syntax = "proto3";
+package protonyom;
+
+option go_package = "github.com/aiceru/protonyom/gonyom";
+
+import "protonyom_models.proto";
+
+service PetApi {
+  rpc GetFamilies(GetFamiliesRequest) returns (GetFamiliesReply) {}
+//  rpc GetSpecies(GetSpeciesRequest) returns (GetSpeciesReply) {}
+  rpc AddPet(AddPetRequest) returns (PetListReply) {}
+  rpc UpdatePet(UpdatePetRequest) returns (PetListReply) {}
+  rpc DeletePet(DeletePetRequest) returns (PetListReply) {}
+  rpc GetPetList(GetPetListRequest) returns (PetListReply) {}
+}
+
+message GetFamiliesRequest {
+  string language = 1;
+}
+message Family {
+  string name = 1;
+  map<string, string> species = 2;
+}
+message GetFamiliesReply {
+  map<string, Family> families = 1;
+}
+
+//message GetSpeciesRequest {
+//  string language = 1;
+//  string family = 2;
+//}
+//message GetSpeciesReply {
+//  map<string, string> speciesmap = 1;
+//}
+
+message AddPetRequest {
+  Pet pet = 1;
+}
+message UpdatePetRequest {
+  Pet pet = 1;
+}
+message DeletePetRequest {
+  string petId = 1;
+}
+message GetPetListRequest {
+  repeated string petIds = 1;
+}
+
+message PetListReply {
+  repeated Pet pets = 1;
+}

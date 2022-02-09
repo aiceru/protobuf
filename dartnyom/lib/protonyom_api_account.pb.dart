@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'protonyom_models.pb.dart' as $2;
+import 'protonyom_models.pb.dart' as $3;
 
 class GetAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAccountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
@@ -60,13 +60,13 @@ class GetAccountRequest extends $pb.GeneratedMessage {
 
 class GetAccountReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAccountReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$2.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $2.Account.create)
+    ..aOM<$3.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $3.Account.create)
     ..hasRequiredFields = false
   ;
 
   GetAccountReply._() : super();
   factory GetAccountReply({
-    $2.Account? account,
+    $3.Account? account,
   }) {
     final _result = create();
     if (account != null) {
@@ -96,30 +96,35 @@ class GetAccountReply extends $pb.GeneratedMessage {
   static GetAccountReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.Account get account => $_getN(0);
+  $3.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($2.Account v) { setField(1, v); }
+  set account($3.Account v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Account ensureAccount() => $_ensure(0);
+  $3.Account ensureAccount() => $_ensure(0);
 }
 
 class UpdateAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdateAccountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$2.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $2.Account.create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'path')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
     ..hasRequiredFields = false
   ;
 
   UpdateAccountRequest._() : super();
   factory UpdateAccountRequest({
-    $2.Account? account,
+    $core.String? path,
+    $core.String? value,
   }) {
     final _result = create();
-    if (account != null) {
-      _result.account = account;
+    if (path != null) {
+      _result.path = path;
+    }
+    if (value != null) {
+      _result.value = value;
     }
     return _result;
   }
@@ -145,26 +150,33 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   static UpdateAccountRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.Account get account => $_getN(0);
+  $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
-  set account($2.Account v) { setField(1, v); }
+  set path($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasAccount() => $_has(0);
+  $core.bool hasPath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccount() => clearField(1);
-  @$pb.TagNumber(1)
-  $2.Account ensureAccount() => $_ensure(0);
+  void clearPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set value($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValue() => clearField(2);
 }
 
 class UpdateAccountReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdateAccountReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$2.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $2.Account.create)
+    ..aOM<$3.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $3.Account.create)
     ..hasRequiredFields = false
   ;
 
   UpdateAccountReply._() : super();
   factory UpdateAccountReply({
-    $2.Account? account,
+    $3.Account? account,
   }) {
     final _result = create();
     if (account != null) {
@@ -194,15 +206,15 @@ class UpdateAccountReply extends $pb.GeneratedMessage {
   static UpdateAccountReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.Account get account => $_getN(0);
+  $3.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($2.Account v) { setField(1, v); }
+  set account($3.Account v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $2.Account ensureAccount() => $_ensure(0);
+  $3.Account ensureAccount() => $_ensure(0);
 }
 
 class DeleteAccountRequest extends $pb.GeneratedMessage {

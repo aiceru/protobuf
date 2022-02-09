@@ -3,14 +3,11 @@ package protonyom;
 
 option go_package = "github.com/aiceru/protonyom/gonyom";
 
+message EmptyParams {}
+
 message OAuthInfo {
   string id = 1;
   string email = 2;
-}
-
-message Timestamp {
-  int64 seconds = 1;
-  int32 nanos = 2;
 }
 
 // login 시 app 에 보내줘야 할 정보
@@ -21,15 +18,17 @@ message Account {
   bool hasPassword = 4;
   map<string, OAuthInfo> oauthinfo = 5;
   string photourl = 6;
-  Timestamp signedup = 7;
+  int64 signedup = 7; // timestamp in epoch sec.
   repeated string pets = 8;
 }
 
 message Pet {
   string id = 1;
   string name = 2;
-  Timestamp adopted = 3;
-  string kind = 4;
+  string photourl = 3;
+  int64 adopted = 4;  // timestamp in epoch sec.
+  string family = 5;
+  string species = 6;
 }
 
 message Feeds {
@@ -37,7 +36,7 @@ message Feeds {
 }
 
 message Feed {
-  Timestamp feeded = 1;
+  int64 feeded = 1; // timestamp in epoch sec.
   string feeder = 2;
   double amount = 3;
   string unit = 4;

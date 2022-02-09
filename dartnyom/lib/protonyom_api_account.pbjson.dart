@@ -32,12 +32,13 @@ final $typed_data.Uint8List getAccountReplyDescriptor = $convert.base64Decode('C
 const UpdateAccountRequest$json = const {
   '1': 'UpdateAccountRequest',
   '2': const [
-    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Account', '10': 'account'},
+    const {'1': 'path', '3': 1, '4': 1, '5': 9, '10': 'path'},
+    const {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
 };
 
 /// Descriptor for `UpdateAccountRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List updateAccountRequestDescriptor = $convert.base64Decode('ChRVcGRhdGVBY2NvdW50UmVxdWVzdBIsCgdhY2NvdW50GAEgASgLMhIucHJvdG9ueW9tLkFjY291bnRSB2FjY291bnQ=');
+final $typed_data.Uint8List updateAccountRequestDescriptor = $convert.base64Decode('ChRVcGRhdGVBY2NvdW50UmVxdWVzdBISCgRwYXRoGAEgASgJUgRwYXRoEhQKBXZhbHVlGAIgASgJUgV2YWx1ZQ==');
 @$core.Deprecated('Use updateAccountReplyDescriptor instead')
 const UpdateAccountReply$json = const {
   '1': 'UpdateAccountReply',
