@@ -41,3 +41,8 @@ message Feed {
   double amount = 3;
   string unit = 4;
 }
+
+message PetFeeds {
+  Pet pet = 1;
+  Feeds feeds = 2;
+}

@@ -11,13 +11,10 @@ import 'dart:typed_data' as $typed_data;
 @$core.Deprecated('Use getAccountRequestDescriptor instead')
 const GetAccountRequest$json = const {
   '1': 'GetAccountRequest',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-  ],
 };
 
 /// Descriptor for `GetAccountRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAccountRequestDescriptor = $convert.base64Decode('ChFHZXRBY2NvdW50UmVxdWVzdBIOCgJpZBgBIAEoCVICaWQ=');
+final $typed_data.Uint8List getAccountRequestDescriptor = $convert.base64Decode('ChFHZXRBY2NvdW50UmVxdWVzdA==');
 @$core.Deprecated('Use getAccountReplyDescriptor instead')
 const GetAccountReply$json = const {
   '1': 'GetAccountReply',

@@ -12,7 +12,6 @@ service AccountApi {
 }
 
 message GetAccountRequest {
-  string id = 1;
 }
 
 message GetAccountReply {

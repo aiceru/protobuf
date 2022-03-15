@@ -8,16 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use getFamiliesRequestDescriptor instead')
-const GetFamiliesRequest$json = const {
-  '1': 'GetFamiliesRequest',
-  '2': const [
-    const {'1': 'language', '3': 1, '4': 1, '5': 9, '10': 'language'},
-  ],
-};
-
-/// Descriptor for `GetFamiliesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getFamiliesRequestDescriptor = $convert.base64Decode('ChJHZXRGYW1pbGllc1JlcXVlc3QSGgoIbGFuZ3VhZ2UYASABKAlSCGxhbmd1YWdl');
 @$core.Deprecated('Use familyDescriptor instead')
 const Family$json = const {
   '1': 'Family',
@@ -40,6 +30,16 @@ const Family_SpeciesEntry$json = const {
 
 /// Descriptor for `Family`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List familyDescriptor = $convert.base64Decode('CgZGYW1pbHkSEgoEbmFtZRgBIAEoCVIEbmFtZRI4CgdzcGVjaWVzGAIgAygLMh4ucHJvdG9ueW9tLkZhbWlseS5TcGVjaWVzRW50cnlSB3NwZWNpZXMaOgoMU3BlY2llc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
+@$core.Deprecated('Use getFamiliesRequestDescriptor instead')
+const GetFamiliesRequest$json = const {
+  '1': 'GetFamiliesRequest',
+  '2': const [
+    const {'1': 'language', '3': 1, '4': 1, '5': 9, '10': 'language'},
+  ],
+};
+
+/// Descriptor for `GetFamiliesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getFamiliesRequestDescriptor = $convert.base64Decode('ChJHZXRGYW1pbGllc1JlcXVlc3QSGgoIbGFuZ3VhZ2UYASABKAlSCGxhbmd1YWdl');
 @$core.Deprecated('Use getFamiliesReplyDescriptor instead')
 const GetFamiliesReply$json = const {
   '1': 'GetFamiliesReply',
@@ -66,21 +66,46 @@ const AddPetRequest$json = const {
   '1': 'AddPetRequest',
   '2': const [
     const {'1': 'pet', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Pet', '10': 'pet'},
+    const {'1': 'profilePhoto', '3': 2, '4': 1, '5': 12, '10': 'profilePhoto'},
+    const {'1': 'profileContentType', '3': 3, '4': 1, '5': 9, '10': 'profileContentType'},
   ],
 };
 
 /// Descriptor for `AddPetRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addPetRequestDescriptor = $convert.base64Decode('Cg1BZGRQZXRSZXF1ZXN0EiAKA3BldBgBIAEoCzIOLnByb3RvbnlvbS5QZXRSA3BldA==');
+final $typed_data.Uint8List addPetRequestDescriptor = $convert.base64Decode('Cg1BZGRQZXRSZXF1ZXN0EiAKA3BldBgBIAEoCzIOLnByb3RvbnlvbS5QZXRSA3BldBIiCgxwcm9maWxlUGhvdG8YAiABKAxSDHByb2ZpbGVQaG90bxIuChJwcm9maWxlQ29udGVudFR5cGUYAyABKAlSEnByb2ZpbGVDb250ZW50VHlwZQ==');
+@$core.Deprecated('Use addPetReplyDescriptor instead')
+const AddPetReply$json = const {
+  '1': 'AddPetReply',
+  '2': const [
+    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Account', '10': 'account'},
+    const {'1': 'pets', '3': 2, '4': 3, '5': 11, '6': '.protonyom.Pet', '10': 'pets'},
+  ],
+};
+
+/// Descriptor for `AddPetReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addPetReplyDescriptor = $convert.base64Decode('CgtBZGRQZXRSZXBseRIsCgdhY2NvdW50GAEgASgLMhIucHJvdG9ueW9tLkFjY291bnRSB2FjY291bnQSIgoEcGV0cxgCIAMoCzIOLnByb3RvbnlvbS5QZXRSBHBldHM=');
 @$core.Deprecated('Use updatePetRequestDescriptor instead')
 const UpdatePetRequest$json = const {
   '1': 'UpdatePetRequest',
   '2': const [
     const {'1': 'pet', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Pet', '10': 'pet'},
+    const {'1': 'profilePhoto', '3': 2, '4': 1, '5': 12, '10': 'profilePhoto'},
+    const {'1': 'profileContentType', '3': 3, '4': 1, '5': 9, '10': 'profileContentType'},
   ],
 };
 
 /// Descriptor for `UpdatePetRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List updatePetRequestDescriptor = $convert.base64Decode('ChBVcGRhdGVQZXRSZXF1ZXN0EiAKA3BldBgBIAEoCzIOLnByb3RvbnlvbS5QZXRSA3BldA==');
+final $typed_data.Uint8List updatePetRequestDescriptor = $convert.base64Decode('ChBVcGRhdGVQZXRSZXF1ZXN0EiAKA3BldBgBIAEoCzIOLnByb3RvbnlvbS5QZXRSA3BldBIiCgxwcm9maWxlUGhvdG8YAiABKAxSDHByb2ZpbGVQaG90bxIuChJwcm9maWxlQ29udGVudFR5cGUYAyABKAlSEnByb2ZpbGVDb250ZW50VHlwZQ==');
+@$core.Deprecated('Use updatePetReplyDescriptor instead')
+const UpdatePetReply$json = const {
+  '1': 'UpdatePetReply',
+  '2': const [
+    const {'1': 'pets', '3': 1, '4': 3, '5': 11, '6': '.protonyom.Pet', '10': 'pets'},
+  ],
+};
+
+/// Descriptor for `UpdatePetReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updatePetReplyDescriptor = $convert.base64Decode('Cg5VcGRhdGVQZXRSZXBseRIiCgRwZXRzGAEgAygLMg4ucHJvdG9ueW9tLlBldFIEcGV0cw==');
 @$core.Deprecated('Use deletePetRequestDescriptor instead')
 const DeletePetRequest$json = const {
   '1': 'DeletePetRequest',
@@ -91,6 +116,17 @@ const DeletePetRequest$json = const {
 
 /// Descriptor for `DeletePetRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deletePetRequestDescriptor = $convert.base64Decode('ChBEZWxldGVQZXRSZXF1ZXN0EhQKBXBldElkGAEgASgJUgVwZXRJZA==');
+@$core.Deprecated('Use deletePetReplyDescriptor instead')
+const DeletePetReply$json = const {
+  '1': 'DeletePetReply',
+  '2': const [
+    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Account', '10': 'account'},
+    const {'1': 'pets', '3': 2, '4': 3, '5': 11, '6': '.protonyom.Pet', '10': 'pets'},
+  ],
+};
+
+/// Descriptor for `DeletePetReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deletePetReplyDescriptor = $convert.base64Decode('Cg5EZWxldGVQZXRSZXBseRIsCgdhY2NvdW50GAEgASgLMhIucHJvdG9ueW9tLkFjY291bnRSB2FjY291bnQSIgoEcGV0cxgCIAMoCzIOLnByb3RvbnlvbS5QZXRSBHBldHM=');
 @$core.Deprecated('Use getPetListRequestDescriptor instead')
 const GetPetListRequest$json = const {
   '1': 'GetPetListRequest',
@@ -101,13 +137,33 @@ const GetPetListRequest$json = const {
 
 /// Descriptor for `GetPetListRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getPetListRequestDescriptor = $convert.base64Decode('ChFHZXRQZXRMaXN0UmVxdWVzdBIWCgZwZXRJZHMYASADKAlSBnBldElkcw==');
-@$core.Deprecated('Use petListReplyDescriptor instead')
-const PetListReply$json = const {
-  '1': 'PetListReply',
+@$core.Deprecated('Use getPetListReplyDescriptor instead')
+const GetPetListReply$json = const {
+  '1': 'GetPetListReply',
   '2': const [
     const {'1': 'pets', '3': 1, '4': 3, '5': 11, '6': '.protonyom.Pet', '10': 'pets'},
   ],
 };
 
-/// Descriptor for `PetListReply`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List petListReplyDescriptor = $convert.base64Decode('CgxQZXRMaXN0UmVwbHkSIgoEcGV0cxgBIAMoCzIOLnByb3RvbnlvbS5QZXRSBHBldHM=');
+/// Descriptor for `GetPetListReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPetListReplyDescriptor = $convert.base64Decode('Cg9HZXRQZXRMaXN0UmVwbHkSIgoEcGV0cxgBIAMoCzIOLnByb3RvbnlvbS5QZXRSBHBldHM=');
+@$core.Deprecated('Use getPetWithFeedsRequestDescriptor instead')
+const GetPetWithFeedsRequest$json = const {
+  '1': 'GetPetWithFeedsRequest',
+  '2': const [
+    const {'1': 'petId', '3': 1, '4': 1, '5': 9, '10': 'petId'},
+  ],
+};
+
+/// Descriptor for `GetPetWithFeedsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPetWithFeedsRequestDescriptor = $convert.base64Decode('ChZHZXRQZXRXaXRoRmVlZHNSZXF1ZXN0EhQKBXBldElkGAEgASgJUgVwZXRJZA==');
+@$core.Deprecated('Use getPetWithFeedsReplyDescriptor instead')
+const GetPetWithFeedsReply$json = const {
+  '1': 'GetPetWithFeedsReply',
+  '2': const [
+    const {'1': 'petFeeds', '3': 1, '4': 1, '5': 11, '6': '.protonyom.PetFeeds', '10': 'petFeeds'},
+  ],
+};
+
+/// Descriptor for `GetPetWithFeedsReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPetWithFeedsReplyDescriptor = $convert.base64Decode('ChRHZXRQZXRXaXRoRmVlZHNSZXBseRIvCghwZXRGZWVkcxgBIAEoCzITLnByb3RvbnlvbS5QZXRGZWVkc1IIcGV0RmVlZHM=');

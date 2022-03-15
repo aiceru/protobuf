@@ -7,45 +7,62 @@ import "protonyom_models.proto";
 
 service PetApi {
   rpc GetFamilies(GetFamiliesRequest) returns (GetFamiliesReply) {}
-//  rpc GetSpecies(GetSpeciesRequest) returns (GetSpeciesReply) {}
-  rpc AddPet(AddPetRequest) returns (PetListReply) {}
-  rpc UpdatePet(UpdatePetRequest) returns (PetListReply) {}
-  rpc DeletePet(DeletePetRequest) returns (PetListReply) {}
-  rpc GetPetList(GetPetListRequest) returns (PetListReply) {}
+  rpc AddPet(AddPetRequest) returns (AddPetReply) {}
+  rpc UpdatePet(UpdatePetRequest) returns (UpdatePetReply) {}
+  rpc DeletePet(DeletePetRequest) returns (DeletePetReply) {}
+  rpc GetPetList(GetPetListRequest) returns (GetPetListReply) {}
+  rpc GetPetWithFeeds(GetPetWithFeedsRequest) returns (GetPetWithFeedsReply) {}
+}
+
+message Family {
+  string name = 1;
+  map<string, string> species = 2;
 }
 
 message GetFamiliesRequest {
   string language = 1;
 }
-message Family {
-  string name = 1;
-  map<string, string> species = 2;
-}
 message GetFamiliesReply {
   map<string, Family> families = 1;
 }
 
-//message GetSpeciesRequest {
-//  string language = 1;
-//  string family = 2;
-//}
-//message GetSpeciesReply {
-//  map<string, string> speciesmap = 1;
-//}
-
 message AddPetRequest {
   Pet pet = 1;
+  bytes profilePhoto = 2;
+  string profileContentType = 3;
 }
+message AddPetReply {
+  Account account = 1;
+  repeated Pet pets = 2;
+}
+
 message UpdatePetRequest {
   Pet pet = 1;
+  bytes profilePhoto = 2;
+  string profileContentType = 3;
 }
+message UpdatePetReply {
+  repeated Pet pets = 1;
+}
+
 message DeletePetRequest {
   string petId = 1;
 }
+message DeletePetReply {
+  Account account = 1;
+  repeated Pet pets = 2;
+}
+
 message GetPetListRequest {
   repeated string petIds = 1;
 }
-
-message PetListReply {
+message GetPetListReply {
   repeated Pet pets = 1;
+}
+
+message GetPetWithFeedsRequest {
+  string petId = 1;
+}
+message GetPetWithFeedsReply {
+  PetFeeds petFeeds = 1;
 }

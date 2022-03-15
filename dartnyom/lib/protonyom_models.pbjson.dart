@@ -92,3 +92,14 @@ const Feed$json = const {
 
 /// Descriptor for `Feed`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List feedDescriptor = $convert.base64Decode('CgRGZWVkEhYKBmZlZWRlZBgBIAEoA1IGZmVlZGVkEhYKBmZlZWRlchgCIAEoCVIGZmVlZGVyEhYKBmFtb3VudBgDIAEoAVIGYW1vdW50EhIKBHVuaXQYBCABKAlSBHVuaXQ=');
+@$core.Deprecated('Use petFeedsDescriptor instead')
+const PetFeeds$json = const {
+  '1': 'PetFeeds',
+  '2': const [
+    const {'1': 'pet', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Pet', '10': 'pet'},
+    const {'1': 'feeds', '3': 2, '4': 1, '5': 11, '6': '.protonyom.Feeds', '10': 'feeds'},
+  ],
+};
+
+/// Descriptor for `PetFeeds`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List petFeedsDescriptor = $convert.base64Decode('CghQZXRGZWVkcxIgCgNwZXQYASABKAsyDi5wcm90b255b20uUGV0UgNwZXQSJgoFZmVlZHMYAiABKAsyEC5wcm90b255b20uRmVlZHNSBWZlZWRz');

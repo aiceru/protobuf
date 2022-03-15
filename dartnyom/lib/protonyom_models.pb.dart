@@ -480,3 +480,68 @@ class Feed extends $pb.GeneratedMessage {
   void clearUnit() => clearField(4);
 }
 
+class PetFeeds extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PetFeeds', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+    ..aOM<Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: Pet.create)
+    ..aOM<Feeds>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeds', subBuilder: Feeds.create)
+    ..hasRequiredFields = false
+  ;
+
+  PetFeeds._() : super();
+  factory PetFeeds({
+    Pet? pet,
+    Feeds? feeds,
+  }) {
+    final _result = create();
+    if (pet != null) {
+      _result.pet = pet;
+    }
+    if (feeds != null) {
+      _result.feeds = feeds;
+    }
+    return _result;
+  }
+  factory PetFeeds.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PetFeeds.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PetFeeds clone() => PetFeeds()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PetFeeds copyWith(void Function(PetFeeds) updates) => super.copyWith((message) => updates(message as PetFeeds)) as PetFeeds; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PetFeeds create() => PetFeeds._();
+  PetFeeds createEmptyInstance() => create();
+  static $pb.PbList<PetFeeds> createRepeated() => $pb.PbList<PetFeeds>();
+  @$core.pragma('dart2js:noInline')
+  static PetFeeds getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PetFeeds>(create);
+  static PetFeeds? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Pet get pet => $_getN(0);
+  @$pb.TagNumber(1)
+  set pet(Pet v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPet() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPet() => clearField(1);
+  @$pb.TagNumber(1)
+  Pet ensurePet() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Feeds get feeds => $_getN(1);
+  @$pb.TagNumber(2)
+  set feeds(Feeds v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFeeds() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFeeds() => clearField(2);
+  @$pb.TagNumber(2)
+  Feeds ensureFeeds() => $_ensure(1);
+}
+
