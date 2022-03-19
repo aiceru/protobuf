@@ -350,69 +350,43 @@ class Pet extends $pb.GeneratedMessage {
   void clearSpecies() => clearField(6);
 }
 
-class Feeds extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Feeds', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..pc<Feed>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeds', $pb.PbFieldType.PM, subBuilder: Feed.create)
-    ..hasRequiredFields = false
-  ;
-
-  Feeds._() : super();
-  factory Feeds({
-    $core.Iterable<Feed>? feeds,
-  }) {
-    final _result = create();
-    if (feeds != null) {
-      _result.feeds.addAll(feeds);
-    }
-    return _result;
-  }
-  factory Feeds.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Feeds.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Feeds clone() => Feeds()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Feeds copyWith(void Function(Feeds) updates) => super.copyWith((message) => updates(message as Feeds)) as Feeds; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Feeds create() => Feeds._();
-  Feeds createEmptyInstance() => create();
-  static $pb.PbList<Feeds> createRepeated() => $pb.PbList<Feeds>();
-  @$core.pragma('dart2js:noInline')
-  static Feeds getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Feeds>(create);
-  static Feeds? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<Feed> get feeds => $_getList(0);
-}
-
 class Feed extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Feed', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeded')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeder')
-    ..a<$core.double>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OD)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unit')
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'petId', protoName: 'petId')
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feederId', protoName: 'feederId')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feederName', protoName: 'feederName')
+    ..a<$core.double>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OD)
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unit')
     ..hasRequiredFields = false
   ;
 
   Feed._() : super();
   factory Feed({
-    $fixnum.Int64? feeded,
-    $core.String? feeder,
+    $core.String? id,
+    $core.String? petId,
+    $fixnum.Int64? timestamp,
+    $core.String? feederId,
+    $core.String? feederName,
     $core.double? amount,
     $core.String? unit,
   }) {
     final _result = create();
-    if (feeded != null) {
-      _result.feeded = feeded;
+    if (id != null) {
+      _result.id = id;
     }
-    if (feeder != null) {
-      _result.feeder = feeder;
+    if (petId != null) {
+      _result.petId = petId;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (feederId != null) {
+      _result.feederId = feederId;
+    }
+    if (feederName != null) {
+      _result.feederName = feederName;
     }
     if (amount != null) {
       _result.amount = amount;
@@ -444,104 +418,66 @@ class Feed extends $pb.GeneratedMessage {
   static Feed? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $fixnum.Int64 get feeded => $_getI64(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set feeded($fixnum.Int64 v) { $_setInt64(0, v); }
+  set id($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasFeeded() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFeeded() => clearField(1);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get feeder => $_getSZ(1);
+  $core.String get petId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set feeder($core.String v) { $_setString(1, v); }
+  set petId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasFeeder() => $_has(1);
+  $core.bool hasPetId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFeeder() => clearField(2);
+  void clearPetId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get amount => $_getN(2);
+  $fixnum.Int64 get timestamp => $_getI64(2);
   @$pb.TagNumber(3)
-  set amount($core.double v) { $_setDouble(2, v); }
+  set timestamp($fixnum.Int64 v) { $_setInt64(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasAmount() => $_has(2);
+  $core.bool hasTimestamp() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAmount() => clearField(3);
+  void clearTimestamp() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get unit => $_getSZ(3);
+  $core.String get feederId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set unit($core.String v) { $_setString(3, v); }
+  set feederId($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasUnit() => $_has(3);
+  $core.bool hasFeederId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUnit() => clearField(4);
-}
+  void clearFeederId() => clearField(4);
 
-class PetFeeds extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PetFeeds', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: Pet.create)
-    ..aOM<Feeds>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeds', subBuilder: Feeds.create)
-    ..hasRequiredFields = false
-  ;
+  @$pb.TagNumber(5)
+  $core.String get feederName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set feederName($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasFeederName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearFeederName() => clearField(5);
 
-  PetFeeds._() : super();
-  factory PetFeeds({
-    Pet? pet,
-    Feeds? feeds,
-  }) {
-    final _result = create();
-    if (pet != null) {
-      _result.pet = pet;
-    }
-    if (feeds != null) {
-      _result.feeds = feeds;
-    }
-    return _result;
-  }
-  factory PetFeeds.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PetFeeds.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  PetFeeds clone() => PetFeeds()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PetFeeds copyWith(void Function(PetFeeds) updates) => super.copyWith((message) => updates(message as PetFeeds)) as PetFeeds; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static PetFeeds create() => PetFeeds._();
-  PetFeeds createEmptyInstance() => create();
-  static $pb.PbList<PetFeeds> createRepeated() => $pb.PbList<PetFeeds>();
-  @$core.pragma('dart2js:noInline')
-  static PetFeeds getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PetFeeds>(create);
-  static PetFeeds? _defaultInstance;
+  @$pb.TagNumber(6)
+  $core.double get amount => $_getN(5);
+  @$pb.TagNumber(6)
+  set amount($core.double v) { $_setDouble(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasAmount() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAmount() => clearField(6);
 
-  @$pb.TagNumber(1)
-  Pet get pet => $_getN(0);
-  @$pb.TagNumber(1)
-  set pet(Pet v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasPet() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearPet() => clearField(1);
-  @$pb.TagNumber(1)
-  Pet ensurePet() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  Feeds get feeds => $_getN(1);
-  @$pb.TagNumber(2)
-  set feeds(Feeds v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasFeeds() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFeeds() => clearField(2);
-  @$pb.TagNumber(2)
-  Feeds ensureFeeds() => $_ensure(1);
+  @$pb.TagNumber(7)
+  $core.String get unit => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set unit($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasUnit() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUnit() => clearField(7);
 }
 

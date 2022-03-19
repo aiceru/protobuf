@@ -147,23 +147,23 @@ const GetPetListReply$json = const {
 
 /// Descriptor for `GetPetListReply`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getPetListReplyDescriptor = $convert.base64Decode('Cg9HZXRQZXRMaXN0UmVwbHkSIgoEcGV0cxgBIAMoCzIOLnByb3RvbnlvbS5QZXRSBHBldHM=');
-@$core.Deprecated('Use getPetWithFeedsRequestDescriptor instead')
-const GetPetWithFeedsRequest$json = const {
-  '1': 'GetPetWithFeedsRequest',
+@$core.Deprecated('Use getPetRequestDescriptor instead')
+const GetPetRequest$json = const {
+  '1': 'GetPetRequest',
   '2': const [
     const {'1': 'petId', '3': 1, '4': 1, '5': 9, '10': 'petId'},
   ],
 };
 
-/// Descriptor for `GetPetWithFeedsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPetWithFeedsRequestDescriptor = $convert.base64Decode('ChZHZXRQZXRXaXRoRmVlZHNSZXF1ZXN0EhQKBXBldElkGAEgASgJUgVwZXRJZA==');
-@$core.Deprecated('Use getPetWithFeedsReplyDescriptor instead')
-const GetPetWithFeedsReply$json = const {
-  '1': 'GetPetWithFeedsReply',
+/// Descriptor for `GetPetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPetRequestDescriptor = $convert.base64Decode('Cg1HZXRQZXRSZXF1ZXN0EhQKBXBldElkGAEgASgJUgVwZXRJZA==');
+@$core.Deprecated('Use getPetReplyDescriptor instead')
+const GetPetReply$json = const {
+  '1': 'GetPetReply',
   '2': const [
-    const {'1': 'petFeeds', '3': 1, '4': 1, '5': 11, '6': '.protonyom.PetFeeds', '10': 'petFeeds'},
+    const {'1': 'pet', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Pet', '10': 'pet'},
   ],
 };
 
-/// Descriptor for `GetPetWithFeedsReply`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPetWithFeedsReplyDescriptor = $convert.base64Decode('ChRHZXRQZXRXaXRoRmVlZHNSZXBseRIvCghwZXRGZWVkcxgBIAEoCzITLnByb3RvbnlvbS5QZXRGZWVkc1IIcGV0RmVlZHM=');
+/// Descriptor for `GetPetReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPetReplyDescriptor = $convert.base64Decode('CgtHZXRQZXRSZXBseRIgCgNwZXQYASABKAsyDi5wcm90b255b20uUGV0UgNwZXQ=');

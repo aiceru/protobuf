@@ -31,18 +31,12 @@ message Pet {
   string species = 6;
 }
 
-message Feeds {
-  repeated Feed feeds = 1;
-}
-
 message Feed {
-  int64 feeded = 1; // timestamp in epoch sec.
-  string feeder = 2;
-  double amount = 3;
-  string unit = 4;
-}
-
-message PetFeeds {
-  Pet pet = 1;
-  Feeds feeds = 2;
+  string id = 1;
+  string petId = 2;
+  int64 timestamp = 3; // timestamp in epoch sec.
+  string feederId = 4;
+  string feederName = 5;
+  double amount = 6;
+  string unit = 7;
 }

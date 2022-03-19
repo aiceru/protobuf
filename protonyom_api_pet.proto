@@ -11,7 +11,7 @@ service PetApi {
   rpc UpdatePet(UpdatePetRequest) returns (UpdatePetReply) {}
   rpc DeletePet(DeletePetRequest) returns (DeletePetReply) {}
   rpc GetPetList(GetPetListRequest) returns (GetPetListReply) {}
-  rpc GetPetWithFeeds(GetPetWithFeedsRequest) returns (GetPetWithFeedsReply) {}
+  rpc GetPet(GetPetRequest) returns (GetPetReply) {}
 }
 
 message Family {
@@ -60,9 +60,9 @@ message GetPetListReply {
   repeated Pet pets = 1;
 }
 
-message GetPetWithFeedsRequest {
+message GetPetRequest {
   string petId = 1;
 }
-message GetPetWithFeedsReply {
-  PetFeeds petFeeds = 1;
+message GetPetReply {
+  Pet pet = 1;
 }

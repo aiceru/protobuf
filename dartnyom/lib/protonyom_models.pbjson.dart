@@ -69,37 +69,19 @@ const Pet$json = const {
 
 /// Descriptor for `Pet`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List petDescriptor = $convert.base64Decode('CgNQZXQSDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSGgoIcGhvdG91cmwYAyABKAlSCHBob3RvdXJsEhgKB2Fkb3B0ZWQYBCABKANSB2Fkb3B0ZWQSFgoGZmFtaWx5GAUgASgJUgZmYW1pbHkSGAoHc3BlY2llcxgGIAEoCVIHc3BlY2llcw==');
-@$core.Deprecated('Use feedsDescriptor instead')
-const Feeds$json = const {
-  '1': 'Feeds',
-  '2': const [
-    const {'1': 'feeds', '3': 1, '4': 3, '5': 11, '6': '.protonyom.Feed', '10': 'feeds'},
-  ],
-};
-
-/// Descriptor for `Feeds`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List feedsDescriptor = $convert.base64Decode('CgVGZWVkcxIlCgVmZWVkcxgBIAMoCzIPLnByb3RvbnlvbS5GZWVkUgVmZWVkcw==');
 @$core.Deprecated('Use feedDescriptor instead')
 const Feed$json = const {
   '1': 'Feed',
   '2': const [
-    const {'1': 'feeded', '3': 1, '4': 1, '5': 3, '10': 'feeded'},
-    const {'1': 'feeder', '3': 2, '4': 1, '5': 9, '10': 'feeder'},
-    const {'1': 'amount', '3': 3, '4': 1, '5': 1, '10': 'amount'},
-    const {'1': 'unit', '3': 4, '4': 1, '5': 9, '10': 'unit'},
+    const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    const {'1': 'petId', '3': 2, '4': 1, '5': 9, '10': 'petId'},
+    const {'1': 'timestamp', '3': 3, '4': 1, '5': 3, '10': 'timestamp'},
+    const {'1': 'feederId', '3': 4, '4': 1, '5': 9, '10': 'feederId'},
+    const {'1': 'feederName', '3': 5, '4': 1, '5': 9, '10': 'feederName'},
+    const {'1': 'amount', '3': 6, '4': 1, '5': 1, '10': 'amount'},
+    const {'1': 'unit', '3': 7, '4': 1, '5': 9, '10': 'unit'},
   ],
 };
 
 /// Descriptor for `Feed`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List feedDescriptor = $convert.base64Decode('CgRGZWVkEhYKBmZlZWRlZBgBIAEoA1IGZmVlZGVkEhYKBmZlZWRlchgCIAEoCVIGZmVlZGVyEhYKBmFtb3VudBgDIAEoAVIGYW1vdW50EhIKBHVuaXQYBCABKAlSBHVuaXQ=');
-@$core.Deprecated('Use petFeedsDescriptor instead')
-const PetFeeds$json = const {
-  '1': 'PetFeeds',
-  '2': const [
-    const {'1': 'pet', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Pet', '10': 'pet'},
-    const {'1': 'feeds', '3': 2, '4': 1, '5': 11, '6': '.protonyom.Feeds', '10': 'feeds'},
-  ],
-};
-
-/// Descriptor for `PetFeeds`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List petFeedsDescriptor = $convert.base64Decode('CghQZXRGZWVkcxIgCgNwZXQYASABKAsyDi5wcm90b255b20uUGV0UgNwZXQSJgoFZmVlZHMYAiABKAsyEC5wcm90b255b20uRmVlZHNSBWZlZWRz');
+final $typed_data.Uint8List feedDescriptor = $convert.base64Decode('CgRGZWVkEg4KAmlkGAEgASgJUgJpZBIUCgVwZXRJZBgCIAEoCVIFcGV0SWQSHAoJdGltZXN0YW1wGAMgASgDUgl0aW1lc3RhbXASGgoIZmVlZGVySWQYBCABKAlSCGZlZWRlcklkEh4KCmZlZWRlck5hbWUYBSABKAlSCmZlZWRlck5hbWUSFgoGYW1vdW50GAYgASgBUgZhbW91bnQSEgoEdW5pdBgHIAEoCVIEdW5pdA==');

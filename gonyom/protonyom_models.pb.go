@@ -304,68 +304,24 @@ func (x *Pet) GetSpecies() string {
 	return ""
 }
 
-type Feeds struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Feeds []*Feed `protobuf:"bytes,1,rep,name=feeds,proto3" json:"feeds,omitempty"`
-}
-
-func (x *Feeds) Reset() {
-	*x = Feeds{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protonyom_models_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Feeds) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Feeds) ProtoMessage() {}
-
-func (x *Feeds) ProtoReflect() protoreflect.Message {
-	mi := &file_protonyom_models_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Feeds.ProtoReflect.Descriptor instead.
-func (*Feeds) Descriptor() ([]byte, []int) {
-	return file_protonyom_models_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *Feeds) GetFeeds() []*Feed {
-	if x != nil {
-		return x.Feeds
-	}
-	return nil
-}
-
 type Feed struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Feeded int64   `protobuf:"varint,1,opt,name=feeded,proto3" json:"feeded,omitempty"` // timestamp in epoch sec.
-	Feeder string  `protobuf:"bytes,2,opt,name=feeder,proto3" json:"feeder,omitempty"`
-	Amount float64 `protobuf:"fixed64,3,opt,name=amount,proto3" json:"amount,omitempty"`
-	Unit   string  `protobuf:"bytes,4,opt,name=unit,proto3" json:"unit,omitempty"`
+	Id         string  `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	PetId      string  `protobuf:"bytes,2,opt,name=petId,proto3" json:"petId,omitempty"`
+	Timestamp  int64   `protobuf:"varint,3,opt,name=timestamp,proto3" json:"timestamp,omitempty"` // timestamp in epoch sec.
+	FeederId   string  `protobuf:"bytes,4,opt,name=feederId,proto3" json:"feederId,omitempty"`
+	FeederName string  `protobuf:"bytes,5,opt,name=feederName,proto3" json:"feederName,omitempty"`
+	Amount     float64 `protobuf:"fixed64,6,opt,name=amount,proto3" json:"amount,omitempty"`
+	Unit       string  `protobuf:"bytes,7,opt,name=unit,proto3" json:"unit,omitempty"`
 }
 
 func (x *Feed) Reset() {
 	*x = Feed{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protonyom_models_proto_msgTypes[5]
+		mi := &file_protonyom_models_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -378,7 +334,7 @@ func (x *Feed) String() string {
 func (*Feed) ProtoMessage() {}
 
 func (x *Feed) ProtoReflect() protoreflect.Message {
-	mi := &file_protonyom_models_proto_msgTypes[5]
+	mi := &file_protonyom_models_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -391,19 +347,40 @@ func (x *Feed) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Feed.ProtoReflect.Descriptor instead.
 func (*Feed) Descriptor() ([]byte, []int) {
-	return file_protonyom_models_proto_rawDescGZIP(), []int{5}
+	return file_protonyom_models_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *Feed) GetFeeded() int64 {
+func (x *Feed) GetId() string {
 	if x != nil {
-		return x.Feeded
+		return x.Id
+	}
+	return ""
+}
+
+func (x *Feed) GetPetId() string {
+	if x != nil {
+		return x.PetId
+	}
+	return ""
+}
+
+func (x *Feed) GetTimestamp() int64 {
+	if x != nil {
+		return x.Timestamp
 	}
 	return 0
 }
 
-func (x *Feed) GetFeeder() string {
+func (x *Feed) GetFeederId() string {
 	if x != nil {
-		return x.Feeder
+		return x.FeederId
+	}
+	return ""
+}
+
+func (x *Feed) GetFeederName() string {
+	if x != nil {
+		return x.FeederName
 	}
 	return ""
 }
@@ -420,61 +397,6 @@ func (x *Feed) GetUnit() string {
 		return x.Unit
 	}
 	return ""
-}
-
-type PetFeeds struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Pet   *Pet   `protobuf:"bytes,1,opt,name=pet,proto3" json:"pet,omitempty"`
-	Feeds *Feeds `protobuf:"bytes,2,opt,name=feeds,proto3" json:"feeds,omitempty"`
-}
-
-func (x *PetFeeds) Reset() {
-	*x = PetFeeds{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protonyom_models_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *PetFeeds) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PetFeeds) ProtoMessage() {}
-
-func (x *PetFeeds) ProtoReflect() protoreflect.Message {
-	mi := &file_protonyom_models_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PetFeeds.ProtoReflect.Descriptor instead.
-func (*PetFeeds) Descriptor() ([]byte, []int) {
-	return file_protonyom_models_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *PetFeeds) GetPet() *Pet {
-	if x != nil {
-		return x.Pet
-	}
-	return nil
-}
-
-func (x *PetFeeds) GetFeeds() *Feeds {
-	if x != nil {
-		return x.Feeds
-	}
-	return nil
 }
 
 var File_protonyom_models_proto protoreflect.FileDescriptor
@@ -516,24 +438,21 @@ var file_protonyom_models_proto_rawDesc = []byte{
 	0x12, 0x16, 0x0a, 0x06, 0x66, 0x61, 0x6d, 0x69, 0x6c, 0x79, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x06, 0x66, 0x61, 0x6d, 0x69, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x70, 0x65, 0x63,
 	0x69, 0x65, 0x73, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x73, 0x70, 0x65, 0x63, 0x69,
-	0x65, 0x73, 0x22, 0x2e, 0x0a, 0x05, 0x46, 0x65, 0x65, 0x64, 0x73, 0x12, 0x25, 0x0a, 0x05, 0x66,
-	0x65, 0x65, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2e, 0x46, 0x65, 0x65, 0x64, 0x52, 0x05, 0x66, 0x65, 0x65,
-	0x64, 0x73, 0x22, 0x62, 0x0a, 0x04, 0x46, 0x65, 0x65, 0x64, 0x12, 0x16, 0x0a, 0x06, 0x66, 0x65,
-	0x65, 0x64, 0x65, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x66, 0x65, 0x65, 0x64,
-	0x65, 0x64, 0x12, 0x16, 0x0a, 0x06, 0x66, 0x65, 0x65, 0x64, 0x65, 0x72, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x06, 0x66, 0x65, 0x65, 0x64, 0x65, 0x72, 0x12, 0x16, 0x0a, 0x06, 0x61, 0x6d,
-	0x6f, 0x75, 0x6e, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x01, 0x52, 0x06, 0x61, 0x6d, 0x6f, 0x75,
-	0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x75, 0x6e, 0x69, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x04, 0x75, 0x6e, 0x69, 0x74, 0x22, 0x54, 0x0a, 0x08, 0x50, 0x65, 0x74, 0x46, 0x65, 0x65,
-	0x64, 0x73, 0x12, 0x20, 0x0a, 0x03, 0x70, 0x65, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2e, 0x50, 0x65, 0x74, 0x52,
-	0x03, 0x70, 0x65, 0x74, 0x12, 0x26, 0x0a, 0x05, 0x66, 0x65, 0x65, 0x64, 0x73, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2e,
-	0x46, 0x65, 0x65, 0x64, 0x73, 0x52, 0x05, 0x66, 0x65, 0x65, 0x64, 0x73, 0x42, 0x24, 0x5a, 0x22,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x61, 0x69, 0x63, 0x65, 0x72,
-	0x75, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2f, 0x67, 0x6f, 0x6e, 0x79,
-	0x6f, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x73, 0x22, 0xb2, 0x01, 0x0a, 0x04, 0x46, 0x65, 0x65, 0x64, 0x12, 0x0e, 0x0a, 0x02, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x70,
+	0x65, 0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x70, 0x65, 0x74, 0x49,
+	0x64, 0x12, 0x1c, 0x0a, 0x09, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x12,
+	0x1a, 0x0a, 0x08, 0x66, 0x65, 0x65, 0x64, 0x65, 0x72, 0x49, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x66, 0x65, 0x65, 0x64, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x66,
+	0x65, 0x65, 0x64, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x0a, 0x66, 0x65, 0x65, 0x64, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x61,
+	0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x06, 0x20, 0x01, 0x28, 0x01, 0x52, 0x06, 0x61, 0x6d, 0x6f,
+	0x75, 0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x75, 0x6e, 0x69, 0x74, 0x18, 0x07, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x04, 0x75, 0x6e, 0x69, 0x74, 0x42, 0x24, 0x5a, 0x22, 0x67, 0x69, 0x74, 0x68, 0x75,
+	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x61, 0x69, 0x63, 0x65, 0x72, 0x75, 0x2f, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2f, 0x67, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -548,28 +467,23 @@ func file_protonyom_models_proto_rawDescGZIP() []byte {
 	return file_protonyom_models_proto_rawDescData
 }
 
-var file_protonyom_models_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_protonyom_models_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protonyom_models_proto_goTypes = []interface{}{
 	(*EmptyParams)(nil), // 0: protonyom.EmptyParams
 	(*OAuthInfo)(nil),   // 1: protonyom.OAuthInfo
 	(*Account)(nil),     // 2: protonyom.Account
 	(*Pet)(nil),         // 3: protonyom.Pet
-	(*Feeds)(nil),       // 4: protonyom.Feeds
-	(*Feed)(nil),        // 5: protonyom.Feed
-	(*PetFeeds)(nil),    // 6: protonyom.PetFeeds
-	nil,                 // 7: protonyom.Account.OauthinfoEntry
+	(*Feed)(nil),        // 4: protonyom.Feed
+	nil,                 // 5: protonyom.Account.OauthinfoEntry
 }
 var file_protonyom_models_proto_depIdxs = []int32{
-	7, // 0: protonyom.Account.oauthinfo:type_name -> protonyom.Account.OauthinfoEntry
-	5, // 1: protonyom.Feeds.feeds:type_name -> protonyom.Feed
-	3, // 2: protonyom.PetFeeds.pet:type_name -> protonyom.Pet
-	4, // 3: protonyom.PetFeeds.feeds:type_name -> protonyom.Feeds
-	1, // 4: protonyom.Account.OauthinfoEntry.value:type_name -> protonyom.OAuthInfo
-	5, // [5:5] is the sub-list for method output_type
-	5, // [5:5] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	5, // 0: protonyom.Account.oauthinfo:type_name -> protonyom.Account.OauthinfoEntry
+	1, // 1: protonyom.Account.OauthinfoEntry.value:type_name -> protonyom.OAuthInfo
+	2, // [2:2] is the sub-list for method output_type
+	2, // [2:2] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_protonyom_models_proto_init() }
@@ -627,31 +541,7 @@ func file_protonyom_models_proto_init() {
 			}
 		}
 		file_protonyom_models_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Feeds); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protonyom_models_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Feed); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protonyom_models_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PetFeeds); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -669,7 +559,7 @@ func file_protonyom_models_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protonyom_models_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

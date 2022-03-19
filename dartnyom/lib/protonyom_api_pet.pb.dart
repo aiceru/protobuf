@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'protonyom_models.pb.dart' as $3;
+import 'protonyom_models.pb.dart' as $4;
 
 class Family extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Family', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
@@ -156,7 +156,7 @@ class GetFamiliesReply extends $pb.GeneratedMessage {
 
 class AddPetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddPetRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$3.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: $3.Pet.create)
+    ..aOM<$4.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: $4.Pet.create)
     ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'profilePhoto', $pb.PbFieldType.OY, protoName: 'profilePhoto')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'profileContentType', protoName: 'profileContentType')
     ..hasRequiredFields = false
@@ -164,7 +164,7 @@ class AddPetRequest extends $pb.GeneratedMessage {
 
   AddPetRequest._() : super();
   factory AddPetRequest({
-    $3.Pet? pet,
+    $4.Pet? pet,
     $core.List<$core.int>? profilePhoto,
     $core.String? profileContentType,
   }) {
@@ -202,15 +202,15 @@ class AddPetRequest extends $pb.GeneratedMessage {
   static AddPetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Pet get pet => $_getN(0);
+  $4.Pet get pet => $_getN(0);
   @$pb.TagNumber(1)
-  set pet($3.Pet v) { setField(1, v); }
+  set pet($4.Pet v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPet() => $_has(0);
   @$pb.TagNumber(1)
   void clearPet() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Pet ensurePet() => $_ensure(0);
+  $4.Pet ensurePet() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get profilePhoto => $_getN(1);
@@ -233,15 +233,15 @@ class AddPetRequest extends $pb.GeneratedMessage {
 
 class AddPetReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddPetReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$3.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $3.Account.create)
-    ..pc<$3.Pet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $3.Pet.create)
+    ..aOM<$4.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $4.Account.create)
+    ..pc<$4.Pet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $4.Pet.create)
     ..hasRequiredFields = false
   ;
 
   AddPetReply._() : super();
   factory AddPetReply({
-    $3.Account? account,
-    $core.Iterable<$3.Pet>? pets,
+    $4.Account? account,
+    $core.Iterable<$4.Pet>? pets,
   }) {
     final _result = create();
     if (account != null) {
@@ -274,23 +274,23 @@ class AddPetReply extends $pb.GeneratedMessage {
   static AddPetReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Account get account => $_getN(0);
+  $4.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($3.Account v) { setField(1, v); }
+  set account($4.Account v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Account ensureAccount() => $_ensure(0);
+  $4.Account ensureAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$3.Pet> get pets => $_getList(1);
+  $core.List<$4.Pet> get pets => $_getList(1);
 }
 
 class UpdatePetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdatePetRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$3.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: $3.Pet.create)
+    ..aOM<$4.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: $4.Pet.create)
     ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'profilePhoto', $pb.PbFieldType.OY, protoName: 'profilePhoto')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'profileContentType', protoName: 'profileContentType')
     ..hasRequiredFields = false
@@ -298,7 +298,7 @@ class UpdatePetRequest extends $pb.GeneratedMessage {
 
   UpdatePetRequest._() : super();
   factory UpdatePetRequest({
-    $3.Pet? pet,
+    $4.Pet? pet,
     $core.List<$core.int>? profilePhoto,
     $core.String? profileContentType,
   }) {
@@ -336,15 +336,15 @@ class UpdatePetRequest extends $pb.GeneratedMessage {
   static UpdatePetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Pet get pet => $_getN(0);
+  $4.Pet get pet => $_getN(0);
   @$pb.TagNumber(1)
-  set pet($3.Pet v) { setField(1, v); }
+  set pet($4.Pet v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPet() => $_has(0);
   @$pb.TagNumber(1)
   void clearPet() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Pet ensurePet() => $_ensure(0);
+  $4.Pet ensurePet() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get profilePhoto => $_getN(1);
@@ -367,13 +367,13 @@ class UpdatePetRequest extends $pb.GeneratedMessage {
 
 class UpdatePetReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdatePetReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..pc<$3.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $3.Pet.create)
+    ..pc<$4.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $4.Pet.create)
     ..hasRequiredFields = false
   ;
 
   UpdatePetReply._() : super();
   factory UpdatePetReply({
-    $core.Iterable<$3.Pet>? pets,
+    $core.Iterable<$4.Pet>? pets,
   }) {
     final _result = create();
     if (pets != null) {
@@ -403,7 +403,7 @@ class UpdatePetReply extends $pb.GeneratedMessage {
   static UpdatePetReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.Pet> get pets => $_getList(0);
+  $core.List<$4.Pet> get pets => $_getList(0);
 }
 
 class DeletePetRequest extends $pb.GeneratedMessage {
@@ -455,15 +455,15 @@ class DeletePetRequest extends $pb.GeneratedMessage {
 
 class DeletePetReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeletePetReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$3.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $3.Account.create)
-    ..pc<$3.Pet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $3.Pet.create)
+    ..aOM<$4.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $4.Account.create)
+    ..pc<$4.Pet>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $4.Pet.create)
     ..hasRequiredFields = false
   ;
 
   DeletePetReply._() : super();
   factory DeletePetReply({
-    $3.Account? account,
-    $core.Iterable<$3.Pet>? pets,
+    $4.Account? account,
+    $core.Iterable<$4.Pet>? pets,
   }) {
     final _result = create();
     if (account != null) {
@@ -496,18 +496,18 @@ class DeletePetReply extends $pb.GeneratedMessage {
   static DeletePetReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Account get account => $_getN(0);
+  $4.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($3.Account v) { setField(1, v); }
+  set account($4.Account v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Account ensureAccount() => $_ensure(0);
+  $4.Account ensureAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$3.Pet> get pets => $_getList(1);
+  $core.List<$4.Pet> get pets => $_getList(1);
 }
 
 class GetPetListRequest extends $pb.GeneratedMessage {
@@ -553,13 +553,13 @@ class GetPetListRequest extends $pb.GeneratedMessage {
 
 class GetPetListReply extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPetListReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..pc<$3.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $3.Pet.create)
+    ..pc<$4.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pets', $pb.PbFieldType.PM, subBuilder: $4.Pet.create)
     ..hasRequiredFields = false
   ;
 
   GetPetListReply._() : super();
   factory GetPetListReply({
-    $core.Iterable<$3.Pet>? pets,
+    $core.Iterable<$4.Pet>? pets,
   }) {
     final _result = create();
     if (pets != null) {
@@ -589,17 +589,17 @@ class GetPetListReply extends $pb.GeneratedMessage {
   static GetPetListReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.Pet> get pets => $_getList(0);
+  $core.List<$4.Pet> get pets => $_getList(0);
 }
 
-class GetPetWithFeedsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPetWithFeedsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+class GetPetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPetRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'petId', protoName: 'petId')
     ..hasRequiredFields = false
   ;
 
-  GetPetWithFeedsRequest._() : super();
-  factory GetPetWithFeedsRequest({
+  GetPetRequest._() : super();
+  factory GetPetRequest({
     $core.String? petId,
   }) {
     final _result = create();
@@ -608,26 +608,26 @@ class GetPetWithFeedsRequest extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory GetPetWithFeedsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetPetWithFeedsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory GetPetRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetPetRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  GetPetWithFeedsRequest clone() => GetPetWithFeedsRequest()..mergeFromMessage(this);
+  GetPetRequest clone() => GetPetRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetPetWithFeedsRequest copyWith(void Function(GetPetWithFeedsRequest) updates) => super.copyWith((message) => updates(message as GetPetWithFeedsRequest)) as GetPetWithFeedsRequest; // ignore: deprecated_member_use
+  GetPetRequest copyWith(void Function(GetPetRequest) updates) => super.copyWith((message) => updates(message as GetPetRequest)) as GetPetRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static GetPetWithFeedsRequest create() => GetPetWithFeedsRequest._();
-  GetPetWithFeedsRequest createEmptyInstance() => create();
-  static $pb.PbList<GetPetWithFeedsRequest> createRepeated() => $pb.PbList<GetPetWithFeedsRequest>();
+  static GetPetRequest create() => GetPetRequest._();
+  GetPetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetPetRequest> createRepeated() => $pb.PbList<GetPetRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetPetWithFeedsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetPetWithFeedsRequest>(create);
-  static GetPetWithFeedsRequest? _defaultInstance;
+  static GetPetRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetPetRequest>(create);
+  static GetPetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get petId => $_getSZ(0);
@@ -639,52 +639,52 @@ class GetPetWithFeedsRequest extends $pb.GeneratedMessage {
   void clearPetId() => clearField(1);
 }
 
-class GetPetWithFeedsReply extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPetWithFeedsReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
-    ..aOM<$3.PetFeeds>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'petFeeds', protoName: 'petFeeds', subBuilder: $3.PetFeeds.create)
+class GetPetReply extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPetReply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+    ..aOM<$4.Pet>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pet', subBuilder: $4.Pet.create)
     ..hasRequiredFields = false
   ;
 
-  GetPetWithFeedsReply._() : super();
-  factory GetPetWithFeedsReply({
-    $3.PetFeeds? petFeeds,
+  GetPetReply._() : super();
+  factory GetPetReply({
+    $4.Pet? pet,
   }) {
     final _result = create();
-    if (petFeeds != null) {
-      _result.petFeeds = petFeeds;
+    if (pet != null) {
+      _result.pet = pet;
     }
     return _result;
   }
-  factory GetPetWithFeedsReply.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetPetWithFeedsReply.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory GetPetReply.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetPetReply.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  GetPetWithFeedsReply clone() => GetPetWithFeedsReply()..mergeFromMessage(this);
+  GetPetReply clone() => GetPetReply()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetPetWithFeedsReply copyWith(void Function(GetPetWithFeedsReply) updates) => super.copyWith((message) => updates(message as GetPetWithFeedsReply)) as GetPetWithFeedsReply; // ignore: deprecated_member_use
+  GetPetReply copyWith(void Function(GetPetReply) updates) => super.copyWith((message) => updates(message as GetPetReply)) as GetPetReply; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static GetPetWithFeedsReply create() => GetPetWithFeedsReply._();
-  GetPetWithFeedsReply createEmptyInstance() => create();
-  static $pb.PbList<GetPetWithFeedsReply> createRepeated() => $pb.PbList<GetPetWithFeedsReply>();
+  static GetPetReply create() => GetPetReply._();
+  GetPetReply createEmptyInstance() => create();
+  static $pb.PbList<GetPetReply> createRepeated() => $pb.PbList<GetPetReply>();
   @$core.pragma('dart2js:noInline')
-  static GetPetWithFeedsReply getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetPetWithFeedsReply>(create);
-  static GetPetWithFeedsReply? _defaultInstance;
+  static GetPetReply getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetPetReply>(create);
+  static GetPetReply? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.PetFeeds get petFeeds => $_getN(0);
+  $4.Pet get pet => $_getN(0);
   @$pb.TagNumber(1)
-  set petFeeds($3.PetFeeds v) { setField(1, v); }
+  set pet($4.Pet v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasPetFeeds() => $_has(0);
+  $core.bool hasPet() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPetFeeds() => clearField(1);
+  void clearPet() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PetFeeds ensurePetFeeds() => $_ensure(0);
+  $4.Pet ensurePet() => $_ensure(0);
 }
 

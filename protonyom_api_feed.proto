@@ -1,0 +1,43 @@
+syntax = "proto3";
+package protonyom;
+
+option go_package = "github.com/aiceru/protonyom/gonyom";
+
+import "protonyom_models.proto";
+
+service FeedApi {
+  rpc AddFeed(AddFeedRequest) returns (AddFeedReply) {}
+  rpc GetFeeds(GetFeedsRequest) returns (GetFeedsReply) {}
+  rpc DeleteFeed(DeleteFeedRequest) returns (DeleteFeedReply) {}
+  rpc UpdateFeed(UpdateFeedRequest) returns (UpdateFeedReply) {}
+}
+
+message AddFeedRequest {
+  Feed feed = 1;
+}
+message AddFeedReply {
+  Feed feed = 1;
+}
+
+message GetFeedsRequest {
+  string petId = 1;
+  int64 startAfter = 2; // last feed timestamp
+  int32 limit = 3;
+}
+message GetFeedsReply {
+  repeated Feed feeds = 1;
+}
+
+message DeleteFeedRequest {
+  string petId = 1;
+  string feedId = 2;
+}
+message DeleteFeedReply {
+}
+
+message UpdateFeedRequest {
+  Feed feed = 1;
+}
+message UpdateFeedReply {
+  Feed feed = 1;
+}
