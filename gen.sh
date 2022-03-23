@@ -16,4 +16,7 @@ protoc \
 --go_opt=module=github.com/aiceru/protonyom \
 --go-grpc_out=$SRC_DIR \
 --go-grpc_opt=module=github.com/aiceru/protonyom \
-$SRC_DIR/*.proto \
+--include_imports \
+--include_source_info \
+--descriptor_set_out api_descriptor.pb \
+$SRC_DIR/*.proto

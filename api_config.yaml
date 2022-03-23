@@ -1,0 +1,13 @@
+type: google.api.Service
+config_version: 3
+name: "*.apigateway.ohmnyom.cloud.goog"
+title: ohmnyom API Gateway
+apis:
+  - name: protonyom.SignApi
+  - name: protonyom.PetApi
+  - name: protonyom.FeedApi
+  - name: protonyom.AccountApi
+backend:
+  rules:
+    - selector: "*"
+      address: grpcs://ohmnyom-grpc-server-7ekgtfwjgq-du.a.run.app
