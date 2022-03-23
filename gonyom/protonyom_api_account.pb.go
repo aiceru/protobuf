@@ -292,6 +292,100 @@ func (*DeleteAccountReply) Descriptor() ([]byte, []int) {
 	return file_protonyom_api_account_proto_rawDescGZIP(), []int{5}
 }
 
+type AcceptInviteRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PetId string `protobuf:"bytes,1,opt,name=petId,proto3" json:"petId,omitempty"`
+}
+
+func (x *AcceptInviteRequest) Reset() {
+	*x = AcceptInviteRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protonyom_api_account_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AcceptInviteRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AcceptInviteRequest) ProtoMessage() {}
+
+func (x *AcceptInviteRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protonyom_api_account_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AcceptInviteRequest.ProtoReflect.Descriptor instead.
+func (*AcceptInviteRequest) Descriptor() ([]byte, []int) {
+	return file_protonyom_api_account_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *AcceptInviteRequest) GetPetId() string {
+	if x != nil {
+		return x.PetId
+	}
+	return ""
+}
+
+type AcceptInviteReply struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Account *Account `protobuf:"bytes,1,opt,name=account,proto3" json:"account,omitempty"`
+}
+
+func (x *AcceptInviteReply) Reset() {
+	*x = AcceptInviteReply{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protonyom_api_account_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AcceptInviteReply) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AcceptInviteReply) ProtoMessage() {}
+
+func (x *AcceptInviteReply) ProtoReflect() protoreflect.Message {
+	mi := &file_protonyom_api_account_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AcceptInviteReply.ProtoReflect.Descriptor instead.
+func (*AcceptInviteReply) Descriptor() ([]byte, []int) {
+	return file_protonyom_api_account_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *AcceptInviteReply) GetAccount() *Account {
+	if x != nil {
+		return x.Account
+	}
+	return nil
+}
+
 var File_protonyom_api_account_proto protoreflect.FileDescriptor
 
 var file_protonyom_api_account_proto_rawDesc = []byte{
@@ -316,7 +410,14 @@ var file_protonyom_api_account_proto_rawDesc = []byte{
 	0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71,
 	0x75, 0x65, 0x73, 0x74, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x02, 0x69, 0x64, 0x22, 0x14, 0x0a, 0x12, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x41, 0x63,
-	0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x32, 0xe7, 0x01, 0x0a, 0x0a, 0x41,
+	0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x2b, 0x0a, 0x13, 0x41, 0x63,
+	0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x14, 0x0a, 0x05, 0x70, 0x65, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x05, 0x70, 0x65, 0x74, 0x49, 0x64, 0x22, 0x41, 0x0a, 0x11, 0x41, 0x63, 0x63, 0x65, 0x70,
+	0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x2c, 0x0a, 0x07,
+	0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2e, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e,
+	0x74, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x32, 0xb7, 0x02, 0x0a, 0x0a, 0x41,
 	0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x41, 0x70, 0x69, 0x12, 0x41, 0x0a, 0x03, 0x47, 0x65, 0x74,
 	0x12, 0x1c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2e, 0x47, 0x65, 0x74,
 	0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a,
@@ -331,6 +432,11 @@ var file_protonyom_api_account_proto_rawDesc = []byte{
 	0x65, 0x6c, 0x65, 0x74, 0x65, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75,
 	0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x2e,
 	0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x70,
+	0x6c, 0x79, 0x22, 0x00, 0x12, 0x4e, 0x0a, 0x0c, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e,
+	0x76, 0x69, 0x74, 0x65, 0x12, 0x1e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d,
+	0x2e, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e, 0x79, 0x6f, 0x6d,
+	0x2e, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x70,
 	0x6c, 0x79, 0x22, 0x00, 0x42, 0x24, 0x5a, 0x22, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
 	0x6f, 0x6d, 0x2f, 0x61, 0x69, 0x63, 0x65, 0x72, 0x75, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6e,
 	0x79, 0x6f, 0x6d, 0x2f, 0x67, 0x6f, 0x6e, 0x79, 0x6f, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
@@ -349,7 +455,7 @@ func file_protonyom_api_account_proto_rawDescGZIP() []byte {
 	return file_protonyom_api_account_proto_rawDescData
 }
 
-var file_protonyom_api_account_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_protonyom_api_account_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_protonyom_api_account_proto_goTypes = []interface{}{
 	(*GetAccountRequest)(nil),    // 0: protonyom.GetAccountRequest
 	(*GetAccountReply)(nil),      // 1: protonyom.GetAccountReply
@@ -357,22 +463,27 @@ var file_protonyom_api_account_proto_goTypes = []interface{}{
 	(*UpdateAccountReply)(nil),   // 3: protonyom.UpdateAccountReply
 	(*DeleteAccountRequest)(nil), // 4: protonyom.DeleteAccountRequest
 	(*DeleteAccountReply)(nil),   // 5: protonyom.DeleteAccountReply
-	(*Account)(nil),              // 6: protonyom.Account
+	(*AcceptInviteRequest)(nil),  // 6: protonyom.AcceptInviteRequest
+	(*AcceptInviteReply)(nil),    // 7: protonyom.AcceptInviteReply
+	(*Account)(nil),              // 8: protonyom.Account
 }
 var file_protonyom_api_account_proto_depIdxs = []int32{
-	6, // 0: protonyom.GetAccountReply.account:type_name -> protonyom.Account
-	6, // 1: protonyom.UpdateAccountReply.account:type_name -> protonyom.Account
-	0, // 2: protonyom.AccountApi.Get:input_type -> protonyom.GetAccountRequest
-	2, // 3: protonyom.AccountApi.Update:input_type -> protonyom.UpdateAccountRequest
-	4, // 4: protonyom.AccountApi.Delete:input_type -> protonyom.DeleteAccountRequest
-	1, // 5: protonyom.AccountApi.Get:output_type -> protonyom.GetAccountReply
-	3, // 6: protonyom.AccountApi.Update:output_type -> protonyom.UpdateAccountReply
-	5, // 7: protonyom.AccountApi.Delete:output_type -> protonyom.DeleteAccountReply
-	5, // [5:8] is the sub-list for method output_type
-	2, // [2:5] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	8, // 0: protonyom.GetAccountReply.account:type_name -> protonyom.Account
+	8, // 1: protonyom.UpdateAccountReply.account:type_name -> protonyom.Account
+	8, // 2: protonyom.AcceptInviteReply.account:type_name -> protonyom.Account
+	0, // 3: protonyom.AccountApi.Get:input_type -> protonyom.GetAccountRequest
+	2, // 4: protonyom.AccountApi.Update:input_type -> protonyom.UpdateAccountRequest
+	4, // 5: protonyom.AccountApi.Delete:input_type -> protonyom.DeleteAccountRequest
+	6, // 6: protonyom.AccountApi.AcceptInvite:input_type -> protonyom.AcceptInviteRequest
+	1, // 7: protonyom.AccountApi.Get:output_type -> protonyom.GetAccountReply
+	3, // 8: protonyom.AccountApi.Update:output_type -> protonyom.UpdateAccountReply
+	5, // 9: protonyom.AccountApi.Delete:output_type -> protonyom.DeleteAccountReply
+	7, // 10: protonyom.AccountApi.AcceptInvite:output_type -> protonyom.AcceptInviteReply
+	7, // [7:11] is the sub-list for method output_type
+	3, // [3:7] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_protonyom_api_account_proto_init() }
@@ -454,6 +565,30 @@ func file_protonyom_api_account_proto_init() {
 				return nil
 			}
 		}
+		file_protonyom_api_account_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AcceptInviteRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protonyom_api_account_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AcceptInviteReply); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -461,7 +596,7 @@ func file_protonyom_api_account_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protonyom_api_account_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   6,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

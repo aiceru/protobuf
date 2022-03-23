@@ -63,3 +63,23 @@ const DeleteAccountReply$json = const {
 
 /// Descriptor for `DeleteAccountReply`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteAccountReplyDescriptor = $convert.base64Decode('ChJEZWxldGVBY2NvdW50UmVwbHk=');
+@$core.Deprecated('Use acceptInviteRequestDescriptor instead')
+const AcceptInviteRequest$json = const {
+  '1': 'AcceptInviteRequest',
+  '2': const [
+    const {'1': 'petId', '3': 1, '4': 1, '5': 9, '10': 'petId'},
+  ],
+};
+
+/// Descriptor for `AcceptInviteRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List acceptInviteRequestDescriptor = $convert.base64Decode('ChNBY2NlcHRJbnZpdGVSZXF1ZXN0EhQKBXBldElkGAEgASgJUgVwZXRJZA==');
+@$core.Deprecated('Use acceptInviteReplyDescriptor instead')
+const AcceptInviteReply$json = const {
+  '1': 'AcceptInviteReply',
+  '2': const [
+    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Account', '10': 'account'},
+  ],
+};
+
+/// Descriptor for `AcceptInviteReply`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List acceptInviteReplyDescriptor = $convert.base64Decode('ChFBY2NlcHRJbnZpdGVSZXBseRIsCgdhY2NvdW50GAEgASgLMhIucHJvdG9ueW9tLkFjY291bnRSB2FjY291bnQ=');

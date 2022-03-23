@@ -32,6 +32,12 @@ class AccountApiClient extends $grpc.Client {
           ($0.DeleteAccountRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.DeleteAccountReply.fromBuffer(value));
+  static final _$acceptInvite =
+      $grpc.ClientMethod<$0.AcceptInviteRequest, $0.AcceptInviteReply>(
+          '/protonyom.AccountApi/AcceptInvite',
+          ($0.AcceptInviteRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.AcceptInviteReply.fromBuffer(value));
 
   AccountApiClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -53,6 +59,12 @@ class AccountApiClient extends $grpc.Client {
       $0.DeleteAccountRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delete, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.AcceptInviteReply> acceptInvite(
+      $0.AcceptInviteRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$acceptInvite, request, options: options);
   }
 }
 
@@ -85,6 +97,15 @@ abstract class AccountApiServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.DeleteAccountRequest.fromBuffer(value),
             ($0.DeleteAccountReply value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.AcceptInviteRequest, $0.AcceptInviteReply>(
+            'AcceptInvite',
+            acceptInvite_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.AcceptInviteRequest.fromBuffer(value),
+            ($0.AcceptInviteReply value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetAccountReply> get_Pre($grpc.ServiceCall call,
@@ -102,10 +123,17 @@ abstract class AccountApiServiceBase extends $grpc.Service {
     return delete(call, await request);
   }
 
+  $async.Future<$0.AcceptInviteReply> acceptInvite_Pre($grpc.ServiceCall call,
+      $async.Future<$0.AcceptInviteRequest> request) async {
+    return acceptInvite(call, await request);
+  }
+
   $async.Future<$0.GetAccountReply> get(
       $grpc.ServiceCall call, $0.GetAccountRequest request);
   $async.Future<$0.UpdateAccountReply> update(
       $grpc.ServiceCall call, $0.UpdateAccountRequest request);
   $async.Future<$0.DeleteAccountReply> delete(
       $grpc.ServiceCall call, $0.DeleteAccountRequest request);
+  $async.Future<$0.AcceptInviteReply> acceptInvite(
+      $grpc.ServiceCall call, $0.AcceptInviteRequest request);
 }

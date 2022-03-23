@@ -25,6 +25,7 @@ type AccountApiClient interface {
 	Get(ctx context.Context, in *GetAccountRequest, opts ...grpc.CallOption) (*GetAccountReply, error)
 	Update(ctx context.Context, in *UpdateAccountRequest, opts ...grpc.CallOption) (*UpdateAccountReply, error)
 	Delete(ctx context.Context, in *DeleteAccountRequest, opts ...grpc.CallOption) (*DeleteAccountReply, error)
+	AcceptInvite(ctx context.Context, in *AcceptInviteRequest, opts ...grpc.CallOption) (*AcceptInviteReply, error)
 }
 
 type accountApiClient struct {
@@ -62,6 +63,15 @@ func (c *accountApiClient) Delete(ctx context.Context, in *DeleteAccountRequest,
 	return out, nil
 }
 
+func (c *accountApiClient) AcceptInvite(ctx context.Context, in *AcceptInviteRequest, opts ...grpc.CallOption) (*AcceptInviteReply, error) {
+	out := new(AcceptInviteReply)
+	err := c.cc.Invoke(ctx, "/protonyom.AccountApi/AcceptInvite", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AccountApiServer is the server API for AccountApi service.
 // All implementations must embed UnimplementedAccountApiServer
 // for forward compatibility
@@ -69,6 +79,7 @@ type AccountApiServer interface {
 	Get(context.Context, *GetAccountRequest) (*GetAccountReply, error)
 	Update(context.Context, *UpdateAccountRequest) (*UpdateAccountReply, error)
 	Delete(context.Context, *DeleteAccountRequest) (*DeleteAccountReply, error)
+	AcceptInvite(context.Context, *AcceptInviteRequest) (*AcceptInviteReply, error)
 	mustEmbedUnimplementedAccountApiServer()
 }
 
@@ -84,6 +95,9 @@ func (UnimplementedAccountApiServer) Update(context.Context, *UpdateAccountReque
 }
 func (UnimplementedAccountApiServer) Delete(context.Context, *DeleteAccountRequest) (*DeleteAccountReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Delete not implemented")
+}
+func (UnimplementedAccountApiServer) AcceptInvite(context.Context, *AcceptInviteRequest) (*AcceptInviteReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AcceptInvite not implemented")
 }
 func (UnimplementedAccountApiServer) mustEmbedUnimplementedAccountApiServer() {}
 
@@ -152,6 +166,24 @@ func _AccountApi_Delete_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AccountApi_AcceptInvite_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AcceptInviteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccountApiServer).AcceptInvite(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protonyom.AccountApi/AcceptInvite",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccountApiServer).AcceptInvite(ctx, req.(*AcceptInviteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AccountApi_ServiceDesc is the grpc.ServiceDesc for AccountApi service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -170,6 +202,10 @@ var AccountApi_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Delete",
 			Handler:    _AccountApi_Delete_Handler,
+		},
+		{
+			MethodName: "AcceptInvite",
+			Handler:    _AccountApi_AcceptInvite_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

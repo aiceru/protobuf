@@ -9,6 +9,7 @@ service AccountApi {
   rpc Get(GetAccountRequest) returns (GetAccountReply) {}
   rpc Update(UpdateAccountRequest) returns (UpdateAccountReply) {}
   rpc Delete(DeleteAccountRequest) returns (DeleteAccountReply) {}
+  rpc AcceptInvite(AcceptInviteRequest) returns (AcceptInviteReply) {}
 }
 
 message GetAccountRequest {
@@ -32,4 +33,12 @@ message DeleteAccountRequest {
 }
 
 message DeleteAccountReply {
+}
+
+message AcceptInviteRequest {
+  string petId = 1;
+}
+
+message AcceptInviteReply {
+  Account account = 1;
 }
