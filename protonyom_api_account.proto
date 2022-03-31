@@ -10,6 +10,7 @@ service AccountApi {
   rpc Update(UpdateAccountRequest) returns (UpdateAccountReply) {}
   rpc Delete(DeleteAccountRequest) returns (DeleteAccountReply) {}
   rpc AcceptInvite(AcceptInviteRequest) returns (AcceptInviteReply) {}
+  rpc UploadProfile(UploadProfileRequest) returns (UploadProfileResponse) {}
 }
 
 message GetAccountRequest {
@@ -40,5 +41,14 @@ message AcceptInviteRequest {
 }
 
 message AcceptInviteReply {
+  Account account = 1;
+}
+
+message UploadProfileRequest {
+  bytes profilePhoto = 1;
+  string profileContentType = 2;
+}
+
+message UploadProfileResponse {
   Account account = 1;
 }

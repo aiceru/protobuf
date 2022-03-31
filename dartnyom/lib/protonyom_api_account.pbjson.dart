@@ -83,3 +83,24 @@ const AcceptInviteReply$json = const {
 
 /// Descriptor for `AcceptInviteReply`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List acceptInviteReplyDescriptor = $convert.base64Decode('ChFBY2NlcHRJbnZpdGVSZXBseRIsCgdhY2NvdW50GAEgASgLMhIucHJvdG9ueW9tLkFjY291bnRSB2FjY291bnQ=');
+@$core.Deprecated('Use uploadProfileRequestDescriptor instead')
+const UploadProfileRequest$json = const {
+  '1': 'UploadProfileRequest',
+  '2': const [
+    const {'1': 'profilePhoto', '3': 1, '4': 1, '5': 12, '10': 'profilePhoto'},
+    const {'1': 'profileContentType', '3': 2, '4': 1, '5': 9, '10': 'profileContentType'},
+  ],
+};
+
+/// Descriptor for `UploadProfileRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadProfileRequestDescriptor = $convert.base64Decode('ChRVcGxvYWRQcm9maWxlUmVxdWVzdBIiCgxwcm9maWxlUGhvdG8YASABKAxSDHByb2ZpbGVQaG90bxIuChJwcm9maWxlQ29udGVudFR5cGUYAiABKAlSEnByb2ZpbGVDb250ZW50VHlwZQ==');
+@$core.Deprecated('Use uploadProfileResponseDescriptor instead')
+const UploadProfileResponse$json = const {
+  '1': 'UploadProfileResponse',
+  '2': const [
+    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.protonyom.Account', '10': 'account'},
+  ],
+};
+
+/// Descriptor for `UploadProfileResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadProfileResponseDescriptor = $convert.base64Decode('ChVVcGxvYWRQcm9maWxlUmVzcG9uc2USLAoHYWNjb3VudBgBIAEoCzISLnByb3RvbnlvbS5BY2NvdW50UgdhY2NvdW50');

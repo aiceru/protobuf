@@ -371,3 +371,113 @@ class AcceptInviteReply extends $pb.GeneratedMessage {
   $4.Account ensureAccount() => $_ensure(0);
 }
 
+class UploadProfileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UploadProfileRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'profilePhoto', $pb.PbFieldType.OY, protoName: 'profilePhoto')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'profileContentType', protoName: 'profileContentType')
+    ..hasRequiredFields = false
+  ;
+
+  UploadProfileRequest._() : super();
+  factory UploadProfileRequest({
+    $core.List<$core.int>? profilePhoto,
+    $core.String? profileContentType,
+  }) {
+    final _result = create();
+    if (profilePhoto != null) {
+      _result.profilePhoto = profilePhoto;
+    }
+    if (profileContentType != null) {
+      _result.profileContentType = profileContentType;
+    }
+    return _result;
+  }
+  factory UploadProfileRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UploadProfileRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UploadProfileRequest clone() => UploadProfileRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UploadProfileRequest copyWith(void Function(UploadProfileRequest) updates) => super.copyWith((message) => updates(message as UploadProfileRequest)) as UploadProfileRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UploadProfileRequest create() => UploadProfileRequest._();
+  UploadProfileRequest createEmptyInstance() => create();
+  static $pb.PbList<UploadProfileRequest> createRepeated() => $pb.PbList<UploadProfileRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UploadProfileRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadProfileRequest>(create);
+  static UploadProfileRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get profilePhoto => $_getN(0);
+  @$pb.TagNumber(1)
+  set profilePhoto($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasProfilePhoto() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearProfilePhoto() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get profileContentType => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set profileContentType($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasProfileContentType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearProfileContentType() => clearField(2);
+}
+
+class UploadProfileResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UploadProfileResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protonyom'), createEmptyInstance: create)
+    ..aOM<$4.Account>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account', subBuilder: $4.Account.create)
+    ..hasRequiredFields = false
+  ;
+
+  UploadProfileResponse._() : super();
+  factory UploadProfileResponse({
+    $4.Account? account,
+  }) {
+    final _result = create();
+    if (account != null) {
+      _result.account = account;
+    }
+    return _result;
+  }
+  factory UploadProfileResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UploadProfileResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UploadProfileResponse clone() => UploadProfileResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UploadProfileResponse copyWith(void Function(UploadProfileResponse) updates) => super.copyWith((message) => updates(message as UploadProfileResponse)) as UploadProfileResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static UploadProfileResponse create() => UploadProfileResponse._();
+  UploadProfileResponse createEmptyInstance() => create();
+  static $pb.PbList<UploadProfileResponse> createRepeated() => $pb.PbList<UploadProfileResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UploadProfileResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadProfileResponse>(create);
+  static UploadProfileResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $4.Account get account => $_getN(0);
+  @$pb.TagNumber(1)
+  set account($4.Account v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccount() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.Account ensureAccount() => $_ensure(0);
+}
+

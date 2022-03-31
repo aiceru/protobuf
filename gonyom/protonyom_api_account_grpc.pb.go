@@ -26,6 +26,7 @@ type AccountApiClient interface {
 	Update(ctx context.Context, in *UpdateAccountRequest, opts ...grpc.CallOption) (*UpdateAccountReply, error)
 	Delete(ctx context.Context, in *DeleteAccountRequest, opts ...grpc.CallOption) (*DeleteAccountReply, error)
 	AcceptInvite(ctx context.Context, in *AcceptInviteRequest, opts ...grpc.CallOption) (*AcceptInviteReply, error)
+	UploadProfile(ctx context.Context, in *UploadProfileRequest, opts ...grpc.CallOption) (*UploadProfileResponse, error)
 }
 
 type accountApiClient struct {
@@ -72,6 +73,15 @@ func (c *accountApiClient) AcceptInvite(ctx context.Context, in *AcceptInviteReq
 	return out, nil
 }
 
+func (c *accountApiClient) UploadProfile(ctx context.Context, in *UploadProfileRequest, opts ...grpc.CallOption) (*UploadProfileResponse, error) {
+	out := new(UploadProfileResponse)
+	err := c.cc.Invoke(ctx, "/protonyom.AccountApi/UploadProfile", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AccountApiServer is the server API for AccountApi service.
 // All implementations must embed UnimplementedAccountApiServer
 // for forward compatibility
@@ -80,6 +90,7 @@ type AccountApiServer interface {
 	Update(context.Context, *UpdateAccountRequest) (*UpdateAccountReply, error)
 	Delete(context.Context, *DeleteAccountRequest) (*DeleteAccountReply, error)
 	AcceptInvite(context.Context, *AcceptInviteRequest) (*AcceptInviteReply, error)
+	UploadProfile(context.Context, *UploadProfileRequest) (*UploadProfileResponse, error)
 	mustEmbedUnimplementedAccountApiServer()
 }
 
@@ -98,6 +109,9 @@ func (UnimplementedAccountApiServer) Delete(context.Context, *DeleteAccountReque
 }
 func (UnimplementedAccountApiServer) AcceptInvite(context.Context, *AcceptInviteRequest) (*AcceptInviteReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AcceptInvite not implemented")
+}
+func (UnimplementedAccountApiServer) UploadProfile(context.Context, *UploadProfileRequest) (*UploadProfileResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UploadProfile not implemented")
 }
 func (UnimplementedAccountApiServer) mustEmbedUnimplementedAccountApiServer() {}
 
@@ -184,6 +198,24 @@ func _AccountApi_AcceptInvite_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AccountApi_UploadProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UploadProfileRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccountApiServer).UploadProfile(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protonyom.AccountApi/UploadProfile",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccountApiServer).UploadProfile(ctx, req.(*UploadProfileRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AccountApi_ServiceDesc is the grpc.ServiceDesc for AccountApi service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -206,6 +238,10 @@ var AccountApi_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AcceptInvite",
 			Handler:    _AccountApi_AcceptInvite_Handler,
+		},
+		{
+			MethodName: "UploadProfile",
+			Handler:    _AccountApi_UploadProfile_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

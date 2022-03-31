@@ -38,6 +38,12 @@ class AccountApiClient extends $grpc.Client {
           ($0.AcceptInviteRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.AcceptInviteReply.fromBuffer(value));
+  static final _$uploadProfile =
+      $grpc.ClientMethod<$0.UploadProfileRequest, $0.UploadProfileResponse>(
+          '/protonyom.AccountApi/UploadProfile',
+          ($0.UploadProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.UploadProfileResponse.fromBuffer(value));
 
   AccountApiClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -65,6 +71,12 @@ class AccountApiClient extends $grpc.Client {
       $0.AcceptInviteRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$acceptInvite, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.UploadProfileResponse> uploadProfile(
+      $0.UploadProfileRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$uploadProfile, request, options: options);
   }
 }
 
@@ -106,6 +118,15 @@ abstract class AccountApiServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.AcceptInviteRequest.fromBuffer(value),
             ($0.AcceptInviteReply value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.UploadProfileRequest, $0.UploadProfileResponse>(
+            'UploadProfile',
+            uploadProfile_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.UploadProfileRequest.fromBuffer(value),
+            ($0.UploadProfileResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetAccountReply> get_Pre($grpc.ServiceCall call,
@@ -128,6 +149,12 @@ abstract class AccountApiServiceBase extends $grpc.Service {
     return acceptInvite(call, await request);
   }
 
+  $async.Future<$0.UploadProfileResponse> uploadProfile_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UploadProfileRequest> request) async {
+    return uploadProfile(call, await request);
+  }
+
   $async.Future<$0.GetAccountReply> get(
       $grpc.ServiceCall call, $0.GetAccountRequest request);
   $async.Future<$0.UpdateAccountReply> update(
@@ -136,4 +163,6 @@ abstract class AccountApiServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.DeleteAccountRequest request);
   $async.Future<$0.AcceptInviteReply> acceptInvite(
       $grpc.ServiceCall call, $0.AcceptInviteRequest request);
+  $async.Future<$0.UploadProfileResponse> uploadProfile(
+      $grpc.ServiceCall call, $0.UploadProfileRequest request);
 }
