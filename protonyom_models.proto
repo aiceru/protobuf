@@ -29,6 +29,7 @@ message Pet {
   int64 adopted = 4;  // timestamp in epoch sec.
   string family = 5;
   string species = 6;
+  repeated string feeders = 7;
 }
 
 message Feed {

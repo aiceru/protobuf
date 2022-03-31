@@ -241,6 +241,7 @@ class Pet extends $pb.GeneratedMessage {
     ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'adopted')
     ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'family')
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'species')
+    ..pPS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'feeders')
     ..hasRequiredFields = false
   ;
 
@@ -252,6 +253,7 @@ class Pet extends $pb.GeneratedMessage {
     $fixnum.Int64? adopted,
     $core.String? family,
     $core.String? species,
+    $core.Iterable<$core.String>? feeders,
   }) {
     final _result = create();
     if (id != null) {
@@ -271,6 +273,9 @@ class Pet extends $pb.GeneratedMessage {
     }
     if (species != null) {
       _result.species = species;
+    }
+    if (feeders != null) {
+      _result.feeders.addAll(feeders);
     }
     return _result;
   }
@@ -348,6 +353,9 @@ class Pet extends $pb.GeneratedMessage {
   $core.bool hasSpecies() => $_has(5);
   @$pb.TagNumber(6)
   void clearSpecies() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.List<$core.String> get feeders => $_getList(6);
 }
 
 class Feed extends $pb.GeneratedMessage {
